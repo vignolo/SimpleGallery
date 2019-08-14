@@ -11,16 +11,30 @@ import UIKit
 
 class GalleryViewController: UIViewController {
     
+    @IBOutlet weak var collectionView: UICollectionView!
+    
     private let navigator = Navigator()
     var session = Session()
     var imagesViewModel = ImagesViewModel()
-    var collectionView = UICollectionView(frame: CGRect(x: 0, y: 0, width: 100, height: 100), collectionViewLayout: UICollectionViewLayout())
+    var imagePickerViewController = ImagePickerViewController()
     var activityIndicatorView = UIActivityIndicatorView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.configureView()
         self.bind()
+    }
+    
+    func configureView() {
+        let addButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(showImagePicker))
+        self.navigationItem.rightBarButtonItem = addButtonItem
+        
+        self.imagePickerViewController.completion = { image in
+            if let image = image {
+                self.uploadImage(image: image)
+            }
+        }
     }
     
     func bind() {
@@ -35,10 +49,22 @@ class GalleryViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        if self.session.valid {
-            self.imagesViewModel.fetch()
-        } else {
-            self.navigator.navigate(to: .login, mode: .present, sender: self)
+        self.imagesViewModel.fetch()
+//        if self.session.valid {
+//            self.imagesViewModel.fetch()
+//        } else {
+//            self.navigator.navigate(to: .login, mode: .present, sender: self)
+//        }
+    }
+    
+    @objc func showImagePicker() {
+        print("add button")
+        self.navigator.navigate(to: .custom(viewController: self.imagePickerViewController), mode: .present, sender: self)
+    }
+    
+    func uploadImage(image: UIImage) {
+        ImageUploader().uploadImage(image: image) { success in
+            //
         }
     }
 }

@@ -10,7 +10,7 @@ import Foundation
 
 class ImagesViewModel {
     
-    var images: Bindable<[Image]> = Bindable([])
+    var images: Bindable<[ImageViewModel]> = Bindable([])
     var fetching: Bindable<Bool> = Bindable(false)
     
     var count: Int {

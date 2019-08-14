@@ -15,6 +15,7 @@ class Navigator: NavigatorProtocol {
         case login
         case imageDetail(image: Image)
         case imagePicker
+        case custom(viewController: UIViewController)
     }
     
     enum Mode {
@@ -44,6 +45,8 @@ class Navigator: NavigatorProtocol {
                 return ImageDetailViewController(image: image)
             case .imagePicker:
                 return ImagePickerViewController()
+            case .custom(let viewController):
+                return viewController
         }
     }
 }

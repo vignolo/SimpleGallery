@@ -54,6 +54,15 @@
 		FFB062EB2301FC6100FAD1DF /* GalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB062EA2301FC6100FAD1DF /* GalleryViewController.swift */; };
 		FFB062EC2301FC6100FAD1DF /* GalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB062EA2301FC6100FAD1DF /* GalleryViewController.swift */; };
 		FFB062ED2301FC6100FAD1DF /* GalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB062EA2301FC6100FAD1DF /* GalleryViewController.swift */; };
+		FFEE85A623044B65000CA5A0 /* GalleryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FFEE85A523044B65000CA5A0 /* GalleryViewController.xib */; };
+		FFEE85A723044B65000CA5A0 /* GalleryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FFEE85A523044B65000CA5A0 /* GalleryViewController.xib */; };
+		FFEE85A823044B65000CA5A0 /* GalleryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FFEE85A523044B65000CA5A0 /* GalleryViewController.xib */; };
+		FFEE85AF230453F3000CA5A0 /* ImageUploader.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFEE85AE230453F3000CA5A0 /* ImageUploader.swift */; };
+		FFEE85B0230453F3000CA5A0 /* ImageUploader.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFEE85AE230453F3000CA5A0 /* ImageUploader.swift */; };
+		FFEE85B1230453F3000CA5A0 /* ImageUploader.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFEE85AE230453F3000CA5A0 /* ImageUploader.swift */; };
+		FFEE85B323048883000CA5A0 /* FileStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFEE85B223048883000CA5A0 /* FileStorage.swift */; };
+		FFEE85B423048883000CA5A0 /* FileStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFEE85B223048883000CA5A0 /* FileStorage.swift */; };
+		FFEE85B523048883000CA5A0 /* FileStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFEE85B223048883000CA5A0 /* FileStorage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -99,6 +108,9 @@
 		FFB062D92301EE0600FAD1DF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FFB062E62301FBAC00FAD1DF /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		FFB062EA2301FC6100FAD1DF /* GalleryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryViewController.swift; sourceTree = "<group>"; };
+		FFEE85A523044B65000CA5A0 /* GalleryViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GalleryViewController.xib; sourceTree = "<group>"; };
+		FFEE85AE230453F3000CA5A0 /* ImageUploader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageUploader.swift; sourceTree = "<group>"; };
+		FFEE85B223048883000CA5A0 /* FileStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileStorage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -177,6 +189,7 @@
 		FFB062B62301EE0500FAD1DF /* SimpleGallery */ = {
 			isa = PBXGroup;
 			children = (
+				FFEE85A9230452F7000CA5A0 /* Helpers */,
 				FF9591832303356900381EC1 /* Session */,
 				FF74CEB0230236FE00A4AD30 /* ViewModel */,
 				FF74CEA32302156400A4AD30 /* Model */,
@@ -216,6 +229,7 @@
 				FFB062EA2301FC6100FAD1DF /* GalleryViewController.swift */,
 				FF74CEA82302169500A4AD30 /* ImageDetailViewController.swift */,
 				FF74CEAC230235D900A4AD30 /* ImagePickerViewController.swift */,
+				FFEE85A523044B65000CA5A0 /* GalleryViewController.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -227,6 +241,15 @@
 				FF74CE9F2302147700A4AD30 /* Navigator.swift */,
 			);
 			path = Navigator;
+			sourceTree = "<group>";
+		};
+		FFEE85A9230452F7000CA5A0 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				FFEE85AE230453F3000CA5A0 /* ImageUploader.swift */,
+				FFEE85B223048883000CA5A0 /* FileStorage.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -334,6 +357,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FFB062C22301EE0600FAD1DF /* LaunchScreen.storyboard in Resources */,
+				FFEE85A623044B65000CA5A0 /* GalleryViewController.xib in Resources */,
 				FFB062BF2301EE0600FAD1DF /* Assets.xcassets in Resources */,
 				FF4D5F4E2303713900FF1D57 /* LoginViewController.xib in Resources */,
 			);
@@ -344,6 +368,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FF4D5F4F2303713900FF1D57 /* LoginViewController.xib in Resources */,
+				FFEE85A723044B65000CA5A0 /* GalleryViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -352,6 +377,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FF4D5F502303713900FF1D57 /* LoginViewController.xib in Resources */,
+				FFEE85A823044B65000CA5A0 /* GalleryViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -374,6 +400,8 @@
 				FFB062EB2301FC6100FAD1DF /* GalleryViewController.swift in Sources */,
 				FF9591802303355000381EC1 /* User.swift in Sources */,
 				FF74CEA92302169500A4AD30 /* ImageDetailViewController.swift in Sources */,
+				FFEE85AF230453F3000CA5A0 /* ImageUploader.swift in Sources */,
+				FFEE85B323048883000CA5A0 /* FileStorage.swift in Sources */,
 				FF9591782302FD5800381EC1 /* ImagesViewModel.swift in Sources */,
 				FFB062B82301EE0500FAD1DF /* AppDelegate.swift in Sources */,
 			);
@@ -395,6 +423,8 @@
 				FF74CE9D2302140900A4AD30 /* NavigatorProtocol.swift in Sources */,
 				FF9591812303355000381EC1 /* User.swift in Sources */,
 				FFB062E82301FBAC00FAD1DF /* LoginViewController.swift in Sources */,
+				FFEE85B0230453F3000CA5A0 /* ImageUploader.swift in Sources */,
+				FFEE85B423048883000CA5A0 /* FileStorage.swift in Sources */,
 				FF9591792302FD5800381EC1 /* ImagesViewModel.swift in Sources */,
 				FFB062CD2301EE0600FAD1DF /* SimpleGalleryTests.swift in Sources */,
 			);
@@ -416,6 +446,8 @@
 				FF74CE9E2302140900A4AD30 /* NavigatorProtocol.swift in Sources */,
 				FF9591822303355000381EC1 /* User.swift in Sources */,
 				FFB062E92301FBAC00FAD1DF /* LoginViewController.swift in Sources */,
+				FFEE85B1230453F3000CA5A0 /* ImageUploader.swift in Sources */,
+				FFEE85B523048883000CA5A0 /* FileStorage.swift in Sources */,
 				FF95917A2302FD5800381EC1 /* ImagesViewModel.swift in Sources */,
 				FFB062D82301EE0600FAD1DF /* SimpleGalleryUITests.swift in Sources */,
 			);
