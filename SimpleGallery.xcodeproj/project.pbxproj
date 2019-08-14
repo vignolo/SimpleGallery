@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FF4D5F462303379700FF1D57 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF4D5F452303379700FF1D57 /* UserViewModel.swift */; };
+		FF4D5F472303379700FF1D57 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF4D5F452303379700FF1D57 /* UserViewModel.swift */; };
+		FF4D5F482303379700FF1D57 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF4D5F452303379700FF1D57 /* UserViewModel.swift */; };
+		FF4D5F4A23033BD400FF1D57 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF4D5F4923033BD400FF1D57 /* Session.swift */; };
+		FF4D5F4B23033BD400FF1D57 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF4D5F4923033BD400FF1D57 /* Session.swift */; };
+		FF4D5F4C23033BD400FF1D57 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF4D5F4923033BD400FF1D57 /* Session.swift */; };
+		FF4D5F4E2303713900FF1D57 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF4D5F4D2303713900FF1D57 /* LoginViewController.xib */; };
+		FF4D5F4F2303713900FF1D57 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF4D5F4D2303713900FF1D57 /* LoginViewController.xib */; };
+		FF4D5F502303713900FF1D57 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF4D5F4D2303713900FF1D57 /* LoginViewController.xib */; };
 		FF74CE9C2302140900A4AD30 /* NavigatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF74CE9B2302140900A4AD30 /* NavigatorProtocol.swift */; };
 		FF74CE9D2302140900A4AD30 /* NavigatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF74CE9B2302140900A4AD30 /* NavigatorProtocol.swift */; };
 		FF74CE9E2302140900A4AD30 /* NavigatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF74CE9B2302140900A4AD30 /* NavigatorProtocol.swift */; };
@@ -25,6 +34,15 @@
 		FF74CEB22302375700A4AD30 /* ImageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF74CEB12302375700A4AD30 /* ImageViewModel.swift */; };
 		FF74CEB32302375700A4AD30 /* ImageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF74CEB12302375700A4AD30 /* ImageViewModel.swift */; };
 		FF74CEB42302375700A4AD30 /* ImageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF74CEB12302375700A4AD30 /* ImageViewModel.swift */; };
+		FF9591782302FD5800381EC1 /* ImagesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF9591772302FD5800381EC1 /* ImagesViewModel.swift */; };
+		FF9591792302FD5800381EC1 /* ImagesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF9591772302FD5800381EC1 /* ImagesViewModel.swift */; };
+		FF95917A2302FD5800381EC1 /* ImagesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF9591772302FD5800381EC1 /* ImagesViewModel.swift */; };
+		FF95917C23030BB000381EC1 /* Bindable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF95917B23030BB000381EC1 /* Bindable.swift */; };
+		FF95917D23030BB000381EC1 /* Bindable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF95917B23030BB000381EC1 /* Bindable.swift */; };
+		FF95917E23030BB000381EC1 /* Bindable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF95917B23030BB000381EC1 /* Bindable.swift */; };
+		FF9591802303355000381EC1 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF95917F2303355000381EC1 /* User.swift */; };
+		FF9591812303355000381EC1 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF95917F2303355000381EC1 /* User.swift */; };
+		FF9591822303355000381EC1 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF95917F2303355000381EC1 /* User.swift */; };
 		FFB062B82301EE0500FAD1DF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB062B72301EE0500FAD1DF /* AppDelegate.swift */; };
 		FFB062BF2301EE0600FAD1DF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FFB062BE2301EE0600FAD1DF /* Assets.xcassets */; };
 		FFB062C22301EE0600FAD1DF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFB062C02301EE0600FAD1DF /* LaunchScreen.storyboard */; };
@@ -56,12 +74,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FF4D5F452303379700FF1D57 /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
+		FF4D5F4923033BD400FF1D57 /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
+		FF4D5F4D2303713900FF1D57 /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 		FF74CE9B2302140900A4AD30 /* NavigatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigatorProtocol.swift; sourceTree = "<group>"; };
 		FF74CE9F2302147700A4AD30 /* Navigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Navigator.swift; sourceTree = "<group>"; };
 		FF74CEA42302157500A4AD30 /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
 		FF74CEA82302169500A4AD30 /* ImageDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDetailViewController.swift; sourceTree = "<group>"; };
 		FF74CEAC230235D900A4AD30 /* ImagePickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerViewController.swift; sourceTree = "<group>"; };
 		FF74CEB12302375700A4AD30 /* ImageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewModel.swift; sourceTree = "<group>"; };
+		FF9591772302FD5800381EC1 /* ImagesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesViewModel.swift; sourceTree = "<group>"; };
+		FF95917B23030BB000381EC1 /* Bindable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bindable.swift; sourceTree = "<group>"; };
+		FF95917F2303355000381EC1 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		FFB062B42301EE0500FAD1DF /* SimpleGallery.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleGallery.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFB062B72301EE0500FAD1DF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FFB062BE2301EE0600FAD1DF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -106,6 +130,7 @@
 			isa = PBXGroup;
 			children = (
 				FF74CEA42302157500A4AD30 /* Image.swift */,
+				FF95917F2303355000381EC1 /* User.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -114,8 +139,19 @@
 			isa = PBXGroup;
 			children = (
 				FF74CEB12302375700A4AD30 /* ImageViewModel.swift */,
+				FF9591772302FD5800381EC1 /* ImagesViewModel.swift */,
+				FF95917B23030BB000381EC1 /* Bindable.swift */,
+				FF4D5F452303379700FF1D57 /* UserViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		FF9591832303356900381EC1 /* Session */ = {
+			isa = PBXGroup;
+			children = (
+				FF4D5F4923033BD400FF1D57 /* Session.swift */,
+			);
+			path = Session;
 			sourceTree = "<group>";
 		};
 		FFB062AB2301EE0500FAD1DF = {
@@ -141,6 +177,7 @@
 		FFB062B62301EE0500FAD1DF /* SimpleGallery */ = {
 			isa = PBXGroup;
 			children = (
+				FF9591832303356900381EC1 /* Session */,
 				FF74CEB0230236FE00A4AD30 /* ViewModel */,
 				FF74CEA32302156400A4AD30 /* Model */,
 				FFB062EE23020ABA00FAD1DF /* Navigator */,
@@ -175,6 +212,7 @@
 			isa = PBXGroup;
 			children = (
 				FFB062E62301FBAC00FAD1DF /* LoginViewController.swift */,
+				FF4D5F4D2303713900FF1D57 /* LoginViewController.xib */,
 				FFB062EA2301FC6100FAD1DF /* GalleryViewController.swift */,
 				FF74CEA82302169500A4AD30 /* ImageDetailViewController.swift */,
 				FF74CEAC230235D900A4AD30 /* ImagePickerViewController.swift */,
@@ -297,6 +335,7 @@
 			files = (
 				FFB062C22301EE0600FAD1DF /* LaunchScreen.storyboard in Resources */,
 				FFB062BF2301EE0600FAD1DF /* Assets.xcassets in Resources */,
+				FF4D5F4E2303713900FF1D57 /* LoginViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -304,6 +343,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FF4D5F4F2303713900FF1D57 /* LoginViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -311,6 +351,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FF4D5F502303713900FF1D57 /* LoginViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -325,10 +366,15 @@
 				FFB062E72301FBAC00FAD1DF /* LoginViewController.swift in Sources */,
 				FF74CEAD230235D900A4AD30 /* ImagePickerViewController.swift in Sources */,
 				FF74CEB22302375700A4AD30 /* ImageViewModel.swift in Sources */,
+				FF95917C23030BB000381EC1 /* Bindable.swift in Sources */,
+				FF4D5F4A23033BD400FF1D57 /* Session.swift in Sources */,
+				FF4D5F462303379700FF1D57 /* UserViewModel.swift in Sources */,
 				FF74CE9C2302140900A4AD30 /* NavigatorProtocol.swift in Sources */,
 				FF74CEA02302147700A4AD30 /* Navigator.swift in Sources */,
 				FFB062EB2301FC6100FAD1DF /* GalleryViewController.swift in Sources */,
+				FF9591802303355000381EC1 /* User.swift in Sources */,
 				FF74CEA92302169500A4AD30 /* ImageDetailViewController.swift in Sources */,
+				FF9591782302FD5800381EC1 /* ImagesViewModel.swift in Sources */,
 				FFB062B82301EE0500FAD1DF /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -341,10 +387,15 @@
 				FF74CEA62302157500A4AD30 /* Image.swift in Sources */,
 				FF74CEAE230235D900A4AD30 /* ImagePickerViewController.swift in Sources */,
 				FF74CEB32302375700A4AD30 /* ImageViewModel.swift in Sources */,
+				FF95917D23030BB000381EC1 /* Bindable.swift in Sources */,
+				FF4D5F4B23033BD400FF1D57 /* Session.swift in Sources */,
+				FF4D5F472303379700FF1D57 /* UserViewModel.swift in Sources */,
 				FF74CEAA2302169500A4AD30 /* ImageDetailViewController.swift in Sources */,
 				FFB062EC2301FC6100FAD1DF /* GalleryViewController.swift in Sources */,
 				FF74CE9D2302140900A4AD30 /* NavigatorProtocol.swift in Sources */,
+				FF9591812303355000381EC1 /* User.swift in Sources */,
 				FFB062E82301FBAC00FAD1DF /* LoginViewController.swift in Sources */,
+				FF9591792302FD5800381EC1 /* ImagesViewModel.swift in Sources */,
 				FFB062CD2301EE0600FAD1DF /* SimpleGalleryTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -357,10 +408,15 @@
 				FF74CEA72302157500A4AD30 /* Image.swift in Sources */,
 				FF74CEAF230235D900A4AD30 /* ImagePickerViewController.swift in Sources */,
 				FF74CEB42302375700A4AD30 /* ImageViewModel.swift in Sources */,
+				FF95917E23030BB000381EC1 /* Bindable.swift in Sources */,
+				FF4D5F4C23033BD400FF1D57 /* Session.swift in Sources */,
+				FF4D5F482303379700FF1D57 /* UserViewModel.swift in Sources */,
 				FF74CEAB2302169500A4AD30 /* ImageDetailViewController.swift in Sources */,
 				FFB062ED2301FC6100FAD1DF /* GalleryViewController.swift in Sources */,
 				FF74CE9E2302140900A4AD30 /* NavigatorProtocol.swift in Sources */,
+				FF9591822303355000381EC1 /* User.swift in Sources */,
 				FFB062E92301FBAC00FAD1DF /* LoginViewController.swift in Sources */,
+				FF95917A2302FD5800381EC1 /* ImagesViewModel.swift in Sources */,
 				FFB062D82301EE0600FAD1DF /* SimpleGalleryUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
