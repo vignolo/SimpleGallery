@@ -26,9 +26,17 @@ class GalleryViewController: UIViewController {
         self.bind()
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        self.updateView()
+    }
+    
     func configureView() {
         let addButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(showImagePicker))
+        let signOutButtonItem = UIBarButtonItem(title: "Sign Out", style: .plain, target: self, action: #selector(signOut))
         self.navigationItem.rightBarButtonItem = addButtonItem
+        self.navigationItem.leftBarButtonItem = signOutButtonItem
         
         self.imagePickerViewController.completion = { image in
             if let image = image {
@@ -46,27 +54,35 @@ class GalleryViewController: UIViewController {
         }
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        
-        self.imagesViewModel.fetch()
-//        if self.session.valid {
-//            self.imagesViewModel.fetch()
-//        } else {
-//            self.navigator.navigate(to: .login, mode: .present, sender: self)
-//        }
+    func updateView() {
+        if self.session.valid {
+            self.imagesViewModel.fetch()
+        } else {
+            self.navigator.navigate(to: .login, mode: .present, sender: self)
+        }
+    }
+    
+    @objc func signOut() {
+        self.session.signOut()
+        self.updateView()
     }
     
     @objc func showImagePicker() {
-        print("add button")
         self.navigator.navigate(to: .custom(viewController: self.imagePickerViewController), mode: .present, sender: self)
     }
     
     func uploadImage(image: UIImage) {
-        ImageUploader().uploadImage(image: image) { success in
-            //
+        ImageUploader().uploadImage(image: image) { image in
+            if let image = image {
+                // Success. Show error and reload list
+                self.imagesViewModel.fetch()
+                print("Image uploaded \(image.path)")
+                return
+            }
+            // Show Error.
         }
     }
+    
 }
 
 extension GalleryViewController: UICollectionViewDataSource {

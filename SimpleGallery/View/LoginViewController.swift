@@ -25,19 +25,24 @@ class LoginViewController: UIViewController {
     
     @objc func login() {
         if let email = self.emailTextField.text, let password = self.passwordTextField.text {
-            session.authenticate(with: email, password: password) { (success) in
-                success ? self.loginSuccess() : self.loginFail()
+            session.authenticate(with: email, password: password) { (success, error) in
+                if success {
+                    self.loginSucceed()
+                } else {
+                    self.loginFail(error: error)
+                }
             }
         }
     }
     
-    func loginSuccess() {
+    func loginSucceed() {
         self.dismiss(animated: true, completion: nil)
     }
     
-    func loginFail() {
+    func loginFail(error: Error?) {
         // TODO: Show Alert
-        print("wrong credentials!")
+        let errorMessage = error.debugDescription 
+        print("Error: \(errorMessage)")
     }
     
 }

@@ -11,9 +11,14 @@ import UIKit
 
 class ImageUploader {
     
-    func uploadImage(image: UIImage, completion:((_ success: Bool) -> Void)?) {
-        // TODO: FileStorege upload
-        completion?(true)
+    func uploadImage(image: UIImage, completion:((_ image: Image?) -> Void)?) {
+        Storage().uploadImage(image: image, completion: { urlString in
+            if let urlString = urlString {
+                completion?(Image(path: urlString))
+                return
+            }
+            completion?(nil)
+        })
     }
     
 }
