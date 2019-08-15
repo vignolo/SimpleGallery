@@ -8,10 +8,6 @@
 
 import Foundation
 
-//protocol SessionViewModelProtocol {
-//    <#requirements#>
-//}
-
 class SessionViewModel {
     
     private var session = Session()

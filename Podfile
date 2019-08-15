@@ -9,6 +9,8 @@ target 'SimpleGallery' do
   pod 'Firebase/Analytics'
   pod 'Firebase/Storage'
   pod 'Firebase/Auth'
+  pod 'Firebase/Core'
+  pod 'Firebase/Firestore'
 
   target 'SimpleGalleryTests' do
     inherit! :search_paths

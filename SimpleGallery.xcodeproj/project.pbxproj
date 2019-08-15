@@ -61,6 +61,9 @@
 		FFDF5A262305A1F30051DB53 /* SessionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFDF5A252305A1F30051DB53 /* SessionViewModel.swift */; };
 		FFDF5A272305A1F30051DB53 /* SessionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFDF5A252305A1F30051DB53 /* SessionViewModel.swift */; };
 		FFDF5A282305A1F30051DB53 /* SessionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFDF5A252305A1F30051DB53 /* SessionViewModel.swift */; };
+		FFDF5A2A2305F9890051DB53 /* Datafase.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFDF5A292305F9890051DB53 /* Datafase.swift */; };
+		FFDF5A2B2305F9890051DB53 /* Datafase.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFDF5A292305F9890051DB53 /* Datafase.swift */; };
+		FFDF5A2C2305F9890051DB53 /* Datafase.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFDF5A292305F9890051DB53 /* Datafase.swift */; };
 		FFEE85A623044B65000CA5A0 /* GalleryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FFEE85A523044B65000CA5A0 /* GalleryViewController.xib */; };
 		FFEE85A723044B65000CA5A0 /* GalleryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FFEE85A523044B65000CA5A0 /* GalleryViewController.xib */; };
 		FFEE85A823044B65000CA5A0 /* GalleryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FFEE85A523044B65000CA5A0 /* GalleryViewController.xib */; };
@@ -126,6 +129,7 @@
 		FFB062EA2301FC6100FAD1DF /* GalleryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryViewController.swift; sourceTree = "<group>"; };
 		FFDF5A212304E2FA0051DB53 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		FFDF5A252305A1F30051DB53 /* SessionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionViewModel.swift; sourceTree = "<group>"; };
+		FFDF5A292305F9890051DB53 /* Datafase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Datafase.swift; sourceTree = "<group>"; };
 		FFEE85A523044B65000CA5A0 /* GalleryViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GalleryViewController.xib; sourceTree = "<group>"; };
 		FFEE85AE230453F3000CA5A0 /* ImageUploader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageUploader.swift; sourceTree = "<group>"; };
 		FFEE85B223048883000CA5A0 /* Storage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storage.swift; sourceTree = "<group>"; };
@@ -296,6 +300,7 @@
 				FFEE85AE230453F3000CA5A0 /* ImageUploader.swift */,
 				FFEE85B223048883000CA5A0 /* Storage.swift */,
 				FF4D5F4923033BD400FF1D57 /* Session.swift */,
+				FFDF5A292305F9890051DB53 /* Datafase.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -529,6 +534,7 @@
 			files = (
 				FF74CEA52302157500A4AD30 /* Image.swift in Sources */,
 				FFB062E72301FBAC00FAD1DF /* LoginViewController.swift in Sources */,
+				FFDF5A2A2305F9890051DB53 /* Datafase.swift in Sources */,
 				FF74CEAD230235D900A4AD30 /* ImagePickerViewController.swift in Sources */,
 				FF74CEB22302375700A4AD30 /* ImageViewModel.swift in Sources */,
 				FF95917C23030BB000381EC1 /* Bindable.swift in Sources */,
@@ -553,6 +559,7 @@
 			files = (
 				FF74CEA12302147700A4AD30 /* Navigator.swift in Sources */,
 				FF74CEA62302157500A4AD30 /* Image.swift in Sources */,
+				FFDF5A2B2305F9890051DB53 /* Datafase.swift in Sources */,
 				FF74CEAE230235D900A4AD30 /* ImagePickerViewController.swift in Sources */,
 				FF74CEB32302375700A4AD30 /* ImageViewModel.swift in Sources */,
 				FF95917D23030BB000381EC1 /* Bindable.swift in Sources */,
@@ -577,6 +584,7 @@
 			files = (
 				FF74CEA22302147700A4AD30 /* Navigator.swift in Sources */,
 				FF74CEA72302157500A4AD30 /* Image.swift in Sources */,
+				FFDF5A2C2305F9890051DB53 /* Datafase.swift in Sources */,
 				FF74CEAF230235D900A4AD30 /* ImagePickerViewController.swift in Sources */,
 				FF74CEB42302375700A4AD30 /* ImageViewModel.swift in Sources */,
 				FF95917E23030BB000381EC1 /* Bindable.swift in Sources */,
