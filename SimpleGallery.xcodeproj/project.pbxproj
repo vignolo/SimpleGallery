@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -173,7 +173,6 @@
 				324E14FD198E8218043EFDCB /* Pods-SimpleGalleryUITests.debug.xcconfig */,
 				A265C15188F8E2EF2DC7F328 /* Pods-SimpleGalleryUITests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -230,6 +229,7 @@
 		FFB062B62301EE0500FAD1DF /* SimpleGallery */ = {
 			isa = PBXGroup;
 			children = (
+				FFDF5A202304E0500051DB53 /* Credentials */,
 				FFEE85A9230452F7000CA5A0 /* Helpers */,
 				FF9591832303356900381EC1 /* Session */,
 				FF74CEB0230236FE00A4AD30 /* ViewModel */,
@@ -282,6 +282,13 @@
 				FF74CE9F2302147700A4AD30 /* Navigator.swift */,
 			);
 			path = Navigator;
+			sourceTree = "<group>";
+		};
+		FFDF5A202304E0500051DB53 /* Credentials */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Credentials;
 			sourceTree = "<group>";
 		};
 		FFEE85A9230452F7000CA5A0 /* Helpers */ = {
