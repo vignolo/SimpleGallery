@@ -11,8 +11,11 @@ import UIKit
 
 class Navigator: NavigatorProtocol {
     
+    var navigationController: UINavigationController?
+    
     enum Destination {
         case login
+        case gallery
         case imageDetail(image: Image)
         case imagePicker
         case custom(viewController: UIViewController)
@@ -23,17 +26,24 @@ class Navigator: NavigatorProtocol {
         case present
     }
     
-    func navigate(to destination: Destination, mode:Mode = .push, sender: UIViewController) {
+    init(sender: UIViewController) {
+        self.navigationController = sender.navigationController
+    }
+    
+    func navigate(to destination: Destination, mode:Mode = .push, animated:Bool = true) {
         
         let viewController = self.viewController(for: destination)
         
         switch mode {
             case .present:
-                sender.navigationController?.present(viewController, animated: true, completion: nil)
+                self.navigationController?.present(viewController, animated: animated, completion: nil)
             case .push:
-                sender.navigationController?.pushViewController(viewController, animated: true)
+                self.navigationController?.pushViewController(viewController, animated: animated)
         }
-        
+    }
+    
+    func navigateToRoot(animated: Bool = true) {
+        self.navigationController?.popToRootViewController(animated: animated)
     }
     
     private func viewController(for destination: Destination) -> UIViewController {
@@ -41,6 +51,8 @@ class Navigator: NavigatorProtocol {
         switch destination {
             case .login:
                 return LoginViewController()
+            case .gallery:
+                return GalleryViewController()
             case .imageDetail(let image):
                 return ImageDetailViewController(image: image)
             case .imagePicker:

@@ -16,15 +16,24 @@ class Session {
     var user: User? {
         return self.cast(firebase: Auth.auth().currentUser)
     }
-    var valid: Bool {
-        return user != nil
+    
+    func isValidSession(completion: @escaping (_ valid: Bool) -> Void) {
+        guard let user = Auth.auth().currentUser else {
+            completion(false)
+            return
+        }
+        
+        // Forcing token refres to verify user was not disabled or deleted
+        user.getIDTokenForcingRefresh(true) { (token, error) in
+            completion(error == nil)
+        }
     }
     
     func signOut() {
         try! Auth.auth().signOut()
     }
     
-    func authenticate(with email: String, password: String, completion: @escaping ((_ sucess: Bool, _ error: Error?) -> Void)) {
+    func signIn(with email: String, password: String, completion: @escaping ((_ sucess: Bool, _ error: Error?) -> Void)) {
         Auth.auth().signIn(withEmail: email, password: password) { (result, error) in
             completion(result != nil, error)
         }

@@ -13,5 +13,6 @@ protocol NavigatorProtocol {
     associatedtype Destination
     associatedtype Mode
     
-    func navigate(to destination: Destination, mode: Mode, sender: UIViewController)
+    func navigate(to destination: Destination, mode: Mode, animated:Bool)
+    func navigateToRoot(animated: Bool)
 }

@@ -11,4 +11,11 @@ import Foundation
 struct UserViewModel {
     var user: User
     
+    init?(user: User?) {
+        guard let user = user else {
+            return nil
+        }
+        
+        self.user = user
+    }
 }

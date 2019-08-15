@@ -14,18 +14,24 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var loginButton: UIButton!
+    private var navigator:Navigator?
     
-    var session = Session()
+    var sessionViewModel = SessionViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.navigator = Navigator(sender: self)
         self.loginButton.addTarget(self, action: #selector(login), for: .touchUpInside)
+        
+        if SessionViewModel().userExist {
+            self.navigator?.navigate(to: .gallery, mode: .push, animated: false)
+        }
     }
     
     @objc func login() {
         if let email = self.emailTextField.text, let password = self.passwordTextField.text {
-            session.authenticate(with: email, password: password) { (success, error) in
+            self.sessionViewModel.signIn(with: email, password: password) { (success, error) in
                 if success {
                     self.loginSucceed()
                 } else {
@@ -36,7 +42,7 @@ class LoginViewController: UIViewController {
     }
     
     func loginSucceed() {
-        self.dismiss(animated: true, completion: nil)
+        self.navigator?.navigate(to: .gallery)
     }
     
     func loginFail(error: Error?) {

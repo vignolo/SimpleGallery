@@ -11,10 +11,11 @@ import UIKit
 
 class GalleryViewController: UIViewController {
     
+    
     @IBOutlet weak var collectionView: UICollectionView!
     
-    private let navigator = Navigator()
-    var session = Session()
+    private var navigator: Navigator?
+    var sessionViewModel = SessionViewModel()
     var imagesViewModel = ImagesViewModel()
     var imagePickerViewController = ImagePickerViewController()
     var activityIndicatorView = UIActivityIndicatorView()
@@ -22,6 +23,12 @@ class GalleryViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.navigator = Navigator(sender: self)
+        self.sessionViewModel.isValidSession { [weak self] valid in
+            if !valid {
+                self?.signOut()
+            }
+        }
         self.configureView()
         self.bind()
     }
@@ -29,53 +36,43 @@ class GalleryViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        self.updateView()
+        self.imagesViewModel.fetch()
     }
     
     func configureView() {
-        let addButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(showImagePicker))
-        let signOutButtonItem = UIBarButtonItem(title: "Sign Out", style: .plain, target: self, action: #selector(signOut))
-        self.navigationItem.rightBarButtonItem = addButtonItem
-        self.navigationItem.leftBarButtonItem = signOutButtonItem
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(showImagePicker))
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Sign Out", style: .plain, target: self, action: #selector(signOut))
         
-        self.imagePickerViewController.completion = { image in
+        self.imagePickerViewController.completion = { [weak self] image in
             if let image = image {
-                self.uploadImage(image: image)
+                self?.uploadImage(image: image)
             }
         }
     }
     
     func bind() {
-        self.imagesViewModel.images.bind { (_) in
+        self.imagesViewModel.images.bind { [unowned self] (_) in
             self.collectionView.reloadData()
         }
-        self.imagesViewModel.fetching.bind { (fetching) in
+        self.imagesViewModel.fetching.bind { [unowned self] (fetching) in
             self.activityIndicatorView.isHidden = !fetching
         }
     }
     
-    func updateView() {
-        if self.session.valid {
-            self.imagesViewModel.fetch()
-        } else {
-            self.navigator.navigate(to: .login, mode: .present, sender: self)
-        }
-    }
-    
     @objc func signOut() {
-        self.session.signOut()
-        self.updateView()
+        self.sessionViewModel.signOut()
+        self.navigator?.navigateToRoot()
     }
     
     @objc func showImagePicker() {
-        self.navigator.navigate(to: .custom(viewController: self.imagePickerViewController), mode: .present, sender: self)
+        self.navigator?.navigate(to: .custom(viewController: self.imagePickerViewController), mode: .present)
     }
     
     func uploadImage(image: UIImage) {
-        ImageUploader().uploadImage(image: image) { image in
+        ImageUploader().uploadImage(image: image) { [weak self] image in
             if let image = image {
                 // Success. Show error and reload list
-                self.imagesViewModel.fetch()
+                self?.imagesViewModel.fetch()
                 print("Image uploaded \(image.path)")
                 return
             }
