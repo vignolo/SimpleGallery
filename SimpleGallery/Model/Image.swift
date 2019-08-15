@@ -9,5 +9,7 @@
 import Foundation
 
 struct Image {
-    var path: String
+    var id: String
+    var original: String
+    var thumbnail: String
 }

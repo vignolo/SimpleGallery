@@ -20,8 +20,8 @@ class Storage {
         case image = "image/jpeg"
     }
     
-    func upload(data: Data, path: Path, type: FileType, completion:((_ urlString: String?) -> Void)?) {
-        let fileRef = FIRStorage.storage().reference().child(Path.images.rawValue).child("image.jpg")
+    func upload(data: Data, path: Path, name:String, type: FileType, completion:((_ urlString: String?) -> Void)?) {
+        let fileRef = FIRStorage.storage().reference().child(Path.images.rawValue).child(name)
         let metadata = StorageMetadata()
         metadata.contentType = FileType.image.rawValue
         
@@ -31,17 +31,9 @@ class Storage {
                     completion?(url?.absoluteString)
                 }
             } else {
-                print("Upload Error")
                 completion?(nil)
             }
         }
     }
     
-    func uploadImage(image: UIImage, completion:((_ urlString: String?) -> Void)?) {
-        if let imageData = image.jpegData(compressionQuality: 0.5) {
-            self.upload(data: imageData, path: .images, type: .image, completion: completion)
-        } else {
-            completion?(nil)
-        }
-    }
 }

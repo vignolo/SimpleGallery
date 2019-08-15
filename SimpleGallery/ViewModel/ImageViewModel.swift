@@ -11,7 +11,5 @@ import Foundation
 struct ImageViewModel {
     private var image: Image
     
-    var path: String {
-        return image.path
-    }
+    
 }

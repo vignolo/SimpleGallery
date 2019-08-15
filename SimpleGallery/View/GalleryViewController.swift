@@ -69,11 +69,11 @@ class GalleryViewController: UIViewController {
     }
     
     func uploadImage(image: UIImage) {
-        ImageUploader().uploadImage(image: image) { [weak self] image in
+        ImageWorker().uploadImage(image: image) { [weak self] image in
             if let image = image {
                 // Success. Show error and reload list
                 self?.imagesViewModel.fetch()
-                print("Image uploaded \(image.path)")
+                print("Image uploaded \(image.thumbnail)")
                 return
             }
             // Show Error.
