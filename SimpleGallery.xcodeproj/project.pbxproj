@@ -57,6 +57,7 @@
 		FFB062EB2301FC6100FAD1DF /* GalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB062EA2301FC6100FAD1DF /* GalleryViewController.swift */; };
 		FFB062EC2301FC6100FAD1DF /* GalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB062EA2301FC6100FAD1DF /* GalleryViewController.swift */; };
 		FFB062ED2301FC6100FAD1DF /* GalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB062EA2301FC6100FAD1DF /* GalleryViewController.swift */; };
+		FFDF5A222304E2FA0051DB53 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FFDF5A212304E2FA0051DB53 /* GoogleService-Info.plist */; };
 		FFEE85A623044B65000CA5A0 /* GalleryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FFEE85A523044B65000CA5A0 /* GalleryViewController.xib */; };
 		FFEE85A723044B65000CA5A0 /* GalleryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FFEE85A523044B65000CA5A0 /* GalleryViewController.xib */; };
 		FFEE85A823044B65000CA5A0 /* GalleryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FFEE85A523044B65000CA5A0 /* GalleryViewController.xib */; };
@@ -120,6 +121,7 @@
 		FFB062D92301EE0600FAD1DF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FFB062E62301FBAC00FAD1DF /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		FFB062EA2301FC6100FAD1DF /* GalleryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryViewController.swift; sourceTree = "<group>"; };
+		FFDF5A212304E2FA0051DB53 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		FFEE85A523044B65000CA5A0 /* GalleryViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GalleryViewController.xib; sourceTree = "<group>"; };
 		FFEE85AE230453F3000CA5A0 /* ImageUploader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageUploader.swift; sourceTree = "<group>"; };
 		FFEE85B223048883000CA5A0 /* FileStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileStorage.swift; sourceTree = "<group>"; };
@@ -287,6 +289,7 @@
 		FFDF5A202304E0500051DB53 /* Credentials */ = {
 			isa = PBXGroup;
 			children = (
+				FFDF5A212304E2FA0051DB53 /* GoogleService-Info.plist */,
 			);
 			path = Credentials;
 			sourceTree = "<group>";
@@ -410,6 +413,7 @@
 			files = (
 				FFB062C22301EE0600FAD1DF /* LaunchScreen.storyboard in Resources */,
 				FFEE85A623044B65000CA5A0 /* GalleryViewController.xib in Resources */,
+				FFDF5A222304E2FA0051DB53 /* GoogleService-Info.plist in Resources */,
 				FFB062BF2301EE0600FAD1DF /* Assets.xcassets in Resources */,
 				FF4D5F4E2303713900FF1D57 /* LoginViewController.xib in Resources */,
 			);
