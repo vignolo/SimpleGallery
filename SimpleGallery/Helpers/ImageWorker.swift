@@ -16,19 +16,21 @@ class ImageWorker {
     static let originalName: String = "original"
     
     func uploadImage(image: UIImage, completion:((_ image: Image?) -> Void)?) {
-        let thumnail = self.resizeImage(image: image, width: ImageWorker.thumbnailSize)
+        let thumnail = image.resize(width: ImageWorker.thumbnailSize)
         if let imageData = image.jpegData(), let thumbnailData = thumnail.jpegData()  {
             let imageID = Database().generateID()
+            
             let imageName = "\(imageID)/\(ImageWorker.originalName)"
             let thumbnailName = "\(imageID)/\(ImageWorker.thumbnailName)"
             
-            var thumbnailUrl: String? = nil
             var imageUrl: String? = nil
+            var thumbnailUrl: String? = nil
             
+            let storageWorker = StorageWorker()
             let dispatchGroup = DispatchGroup()
             
             dispatchGroup.enter()
-            StorageWorker().uploadImage(imageData: imageData, name: imageName) { (imageStringUrl) in
+            storageWorker.uploadImage(imageData: imageData, name: imageName) { (imageStringUrl) in
                 if let imageStringUrl = imageStringUrl {
                     imageUrl = imageStringUrl
                 }
@@ -36,7 +38,7 @@ class ImageWorker {
             }
             
             dispatchGroup.enter()
-            StorageWorker().uploadImage(imageData: thumbnailData, name: thumbnailName) { (thumbnailStringUrl) in
+            storageWorker.uploadImage(imageData: thumbnailData, name: thumbnailName) { (thumbnailStringUrl) in
                 if let thumbnailStringUrl = thumbnailStringUrl {
                     thumbnailUrl = thumbnailStringUrl
                 }
@@ -53,15 +55,5 @@ class ImageWorker {
             }
             
         }
-    }
-    
-    func resizeImage(image: UIImage, width: CGFloat) -> UIImage {
-        let scale = width / image.size.width
-        let height = image.size.height * scale
-        UIGraphicsBeginImageContext(CGSize(width: width, height: height))
-        image.draw(in: CGRect(x: 0, y: 0, width: width, height: height))
-        let newImage = UIGraphicsGetImageFromCurrentImageContext()
-        UIGraphicsEndImageContext()
-        return newImage!
     }
 }
