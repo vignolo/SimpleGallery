@@ -21,9 +21,9 @@ class Storage {
     }
     
     func upload(data: Data, path: Path, name:String, type: FileType, completion:((_ urlString: String?) -> Void)?) {
-        let fileRef = FIRStorage.storage().reference().child(Path.images.rawValue).child(name)
+        let fileRef = FIRStorage.storage().reference().child(path.rawValue).child(name)
         let metadata = StorageMetadata()
-        metadata.contentType = FileType.image.rawValue
+        metadata.contentType = type.rawValue
         
         fileRef.putData(data, metadata: metadata) { (metadata, error) in
             if metadata != nil {
