@@ -52,6 +52,9 @@
 		FF9591802303355000381EC1 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF95917F2303355000381EC1 /* User.swift */; };
 		FF9591812303355000381EC1 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF95917F2303355000381EC1 /* User.swift */; };
 		FF9591822303355000381EC1 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF95917F2303355000381EC1 /* User.swift */; };
+		FFAD6D62230C4D8200524DAC /* GalleryFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFAD6D61230C4D8200524DAC /* GalleryFlowLayout.swift */; };
+		FFAD6D63230C4D8200524DAC /* GalleryFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFAD6D61230C4D8200524DAC /* GalleryFlowLayout.swift */; };
+		FFAD6D64230C4D8200524DAC /* GalleryFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFAD6D61230C4D8200524DAC /* GalleryFlowLayout.swift */; };
 		FFB062B82301EE0500FAD1DF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB062B72301EE0500FAD1DF /* AppDelegate.swift */; };
 		FFB062BF2301EE0600FAD1DF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FFB062BE2301EE0600FAD1DF /* Assets.xcassets */; };
 		FFB062C22301EE0600FAD1DF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFB062C02301EE0600FAD1DF /* LaunchScreen.storyboard */; };
@@ -128,6 +131,7 @@
 		FF9591772302FD5800381EC1 /* ImagesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesViewModel.swift; sourceTree = "<group>"; };
 		FF95917B23030BB000381EC1 /* Bindable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bindable.swift; sourceTree = "<group>"; };
 		FF95917F2303355000381EC1 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		FFAD6D61230C4D8200524DAC /* GalleryFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryFlowLayout.swift; sourceTree = "<group>"; };
 		FFB062B42301EE0500FAD1DF /* SimpleGallery.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleGallery.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFB062B72301EE0500FAD1DF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FFB062BE2301EE0600FAD1DF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -290,6 +294,7 @@
 				FF74CEAC230235D900A4AD30 /* ImagePickerViewController.swift */,
 				FFEE85A523044B65000CA5A0 /* GalleryViewController.xib */,
 				FFFC42A8230B6A1100C3139E /* ImageCollectionViewCell.swift */,
+				FFAD6D61230C4D8200524DAC /* GalleryFlowLayout.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -570,6 +575,7 @@
 				FF9591802303355000381EC1 /* User.swift in Sources */,
 				FF74CEA92302169500A4AD30 /* ImageDetailViewController.swift in Sources */,
 				FFEE85AF230453F3000CA5A0 /* ImageWorker.swift in Sources */,
+				FFAD6D62230C4D8200524DAC /* GalleryFlowLayout.swift in Sources */,
 				FFEE85B323048883000CA5A0 /* Storage.swift in Sources */,
 				FF9591782302FD5800381EC1 /* ImagesViewModel.swift in Sources */,
 				FFFC42A5230B0E4B00C3139E /* DatabaseWorker.swift in Sources */,
@@ -599,6 +605,7 @@
 				FF9591812303355000381EC1 /* User.swift in Sources */,
 				FFB062E82301FBAC00FAD1DF /* LoginViewController.swift in Sources */,
 				FFEE85B0230453F3000CA5A0 /* ImageWorker.swift in Sources */,
+				FFAD6D63230C4D8200524DAC /* GalleryFlowLayout.swift in Sources */,
 				FFEE85B423048883000CA5A0 /* Storage.swift in Sources */,
 				FF9591792302FD5800381EC1 /* ImagesViewModel.swift in Sources */,
 				FFFC42A6230B0E4C00C3139E /* DatabaseWorker.swift in Sources */,
@@ -628,6 +635,7 @@
 				FF9591822303355000381EC1 /* User.swift in Sources */,
 				FFB062E92301FBAC00FAD1DF /* LoginViewController.swift in Sources */,
 				FFEE85B1230453F3000CA5A0 /* ImageWorker.swift in Sources */,
+				FFAD6D64230C4D8200524DAC /* GalleryFlowLayout.swift in Sources */,
 				FFEE85B523048883000CA5A0 /* Storage.swift in Sources */,
 				FF95917A2302FD5800381EC1 /* ImagesViewModel.swift in Sources */,
 				FFFC42A7230B0E4C00C3139E /* DatabaseWorker.swift in Sources */,

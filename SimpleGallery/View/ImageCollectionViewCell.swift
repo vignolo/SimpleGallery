@@ -31,8 +31,8 @@ class ImageCollectionViewCell: UICollectionViewCell {
     }
     
     func configureView() {
-        self.imageView.backgroundColor = .gray
-        self.addSubview(self.imageView)
+        self.imageView.backgroundColor = UIColor.gray.withAlphaComponent(0.3)
+        self.contentView.addSubview(self.imageView)
     }
     
     func configure(viewModel: ImageViewModel) {
@@ -40,6 +40,7 @@ class ImageCollectionViewCell: UICollectionViewCell {
     }
     
     override func layoutSubviews() {
-        self.imageView.frame = self.frame
+        super.layoutSubviews()
+        self.imageView.frame = self.contentView.frame
     }
 }
