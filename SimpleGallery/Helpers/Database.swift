@@ -17,8 +17,20 @@ class Database {
         case images = "images"
     }
     
-    func save(data: [String: Any], path: Path, completion: @escaping (Error?) -> Void) {
+    func save(data: [String: Any], path: Path, completion: ((_ error: Error?) -> Void)?) {
         self.db.collection(path.rawValue).addDocument(data: data, completion: completion)
+    }
+    
+    func fetch(path: Path, completion: @escaping ((_ result: Array<[String: Any]>?) -> Void)) {
+        self.db.collection(path.rawValue).getDocuments { (snapshot, error) in
+            
+            guard let snapshot = snapshot else {
+                completion(nil)
+                return
+            }
+            
+            completion(snapshot.documents.compactMap({$0.data()}))            
+        }
     }
     
 }

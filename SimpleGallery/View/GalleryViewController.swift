@@ -43,6 +43,8 @@ class GalleryViewController: UIViewController {
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(showImagePicker))
         self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Sign Out", style: .plain, target: self, action: #selector(signOut))
         
+        self.collectionView.register(ImageCollectionViewCell.self, forCellWithReuseIdentifier: ImageCollectionViewCell.identifier)
+        
         self.imagePickerViewController.completion = { [weak self] image in
             if let image = image {
                 self?.uploadImage(image: image)
@@ -69,11 +71,10 @@ class GalleryViewController: UIViewController {
     }
     
     func uploadImage(image: UIImage) {
-        ImageWorker().uploadImage(image: image) { [weak self] image in
-            if let image = image {
+        ImageWorker().uploadAndSave(image: image) { [weak self] image in
+            if image != nil {
                 // Success. Show error and reload list
                 self?.imagesViewModel.fetch()
-                print("Image uploaded \(image.thumbnail)")
                 return
             }
             // Show Error.
@@ -88,8 +89,28 @@ extension GalleryViewController: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath)
-        
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ImageCollectionViewCell.identifier, for: indexPath) as! ImageCollectionViewCell
+        let imageViewModel = self.imagesViewModel.image(at: indexPath.row)
+        cell.configure(viewModel: imageViewModel)
         return cell
+    }
+}
+
+extension GalleryViewController : UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let size = (collectionView.frame.width / 3)
+        return CGSize(width: size, height: size)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        return UIEdgeInsets.zero
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 0.0
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        return 0.0
     }
 }

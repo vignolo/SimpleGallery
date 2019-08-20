@@ -79,6 +79,12 @@
 		FFEE85B323048883000CA5A0 /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFEE85B223048883000CA5A0 /* Storage.swift */; };
 		FFEE85B423048883000CA5A0 /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFEE85B223048883000CA5A0 /* Storage.swift */; };
 		FFEE85B523048883000CA5A0 /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFEE85B223048883000CA5A0 /* Storage.swift */; };
+		FFFC42A5230B0E4B00C3139E /* DatabaseWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFFC42A4230B0E4B00C3139E /* DatabaseWorker.swift */; };
+		FFFC42A6230B0E4C00C3139E /* DatabaseWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFFC42A4230B0E4B00C3139E /* DatabaseWorker.swift */; };
+		FFFC42A7230B0E4C00C3139E /* DatabaseWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFFC42A4230B0E4B00C3139E /* DatabaseWorker.swift */; };
+		FFFC42A9230B6A1100C3139E /* ImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFFC42A8230B6A1100C3139E /* ImageCollectionViewCell.swift */; };
+		FFFC42AA230B6A1100C3139E /* ImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFFC42A8230B6A1100C3139E /* ImageCollectionViewCell.swift */; };
+		FFFC42AB230B6A1100C3139E /* ImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFFC42A8230B6A1100C3139E /* ImageCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -141,6 +147,8 @@
 		FFEE85A523044B65000CA5A0 /* GalleryViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GalleryViewController.xib; sourceTree = "<group>"; };
 		FFEE85AE230453F3000CA5A0 /* ImageWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageWorker.swift; sourceTree = "<group>"; };
 		FFEE85B223048883000CA5A0 /* Storage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storage.swift; sourceTree = "<group>"; };
+		FFFC42A4230B0E4B00C3139E /* DatabaseWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseWorker.swift; sourceTree = "<group>"; };
+		FFFC42A8230B6A1100C3139E /* ImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -281,6 +289,7 @@
 				FF74CEA82302169500A4AD30 /* ImageDetailViewController.swift */,
 				FF74CEAC230235D900A4AD30 /* ImagePickerViewController.swift */,
 				FFEE85A523044B65000CA5A0 /* GalleryViewController.xib */,
+				FFFC42A8230B6A1100C3139E /* ImageCollectionViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -311,6 +320,7 @@
 				FFDF5A292305F9890051DB53 /* Database.swift */,
 				FF957E572306052B00BE2186 /* StorageWorker.swift */,
 				FF957E5B2306112D00BE2186 /* UIImage.swift */,
+				FFFC42A4230B0E4B00C3139E /* DatabaseWorker.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -543,6 +553,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FF74CEA52302157500A4AD30 /* Image.swift in Sources */,
+				FFFC42A9230B6A1100C3139E /* ImageCollectionViewCell.swift in Sources */,
 				FF957E5C2306112D00BE2186 /* UIImage.swift in Sources */,
 				FFB062E72301FBAC00FAD1DF /* LoginViewController.swift in Sources */,
 				FFDF5A2A2305F9890051DB53 /* Database.swift in Sources */,
@@ -561,6 +572,7 @@
 				FFEE85AF230453F3000CA5A0 /* ImageWorker.swift in Sources */,
 				FFEE85B323048883000CA5A0 /* Storage.swift in Sources */,
 				FF9591782302FD5800381EC1 /* ImagesViewModel.swift in Sources */,
+				FFFC42A5230B0E4B00C3139E /* DatabaseWorker.swift in Sources */,
 				FFB062B82301EE0500FAD1DF /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -570,6 +582,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FF74CEA12302147700A4AD30 /* Navigator.swift in Sources */,
+				FFFC42AA230B6A1100C3139E /* ImageCollectionViewCell.swift in Sources */,
 				FF957E5D2306112D00BE2186 /* UIImage.swift in Sources */,
 				FF74CEA62302157500A4AD30 /* Image.swift in Sources */,
 				FFDF5A2B2305F9890051DB53 /* Database.swift in Sources */,
@@ -588,6 +601,7 @@
 				FFEE85B0230453F3000CA5A0 /* ImageWorker.swift in Sources */,
 				FFEE85B423048883000CA5A0 /* Storage.swift in Sources */,
 				FF9591792302FD5800381EC1 /* ImagesViewModel.swift in Sources */,
+				FFFC42A6230B0E4C00C3139E /* DatabaseWorker.swift in Sources */,
 				FFB062CD2301EE0600FAD1DF /* SimpleGalleryTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -597,6 +611,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FF74CEA22302147700A4AD30 /* Navigator.swift in Sources */,
+				FFFC42AB230B6A1100C3139E /* ImageCollectionViewCell.swift in Sources */,
 				FF957E5E2306112D00BE2186 /* UIImage.swift in Sources */,
 				FF74CEA72302157500A4AD30 /* Image.swift in Sources */,
 				FFDF5A2C2305F9890051DB53 /* Database.swift in Sources */,
@@ -615,6 +630,7 @@
 				FFEE85B1230453F3000CA5A0 /* ImageWorker.swift in Sources */,
 				FFEE85B523048883000CA5A0 /* Storage.swift in Sources */,
 				FF95917A2302FD5800381EC1 /* ImagesViewModel.swift in Sources */,
+				FFFC42A7230B0E4C00C3139E /* DatabaseWorker.swift in Sources */,
 				FFB062D82301EE0600FAD1DF /* SimpleGalleryUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

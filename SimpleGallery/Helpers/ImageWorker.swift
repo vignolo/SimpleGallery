@@ -12,16 +12,34 @@ import UIKit
 class ImageWorker {
     
     static let thumbnailSize: CGFloat = 200
-    static let thumbnailName: String = "thumbnail.jpg"
-    static let originalName: String = "original"
     
-    func uploadImage(image: UIImage, completion:((_ image: Image?) -> Void)?) {
+    func uploadAndSave(image: UIImage, completion:((_ image: ImageViewModel?) -> Void)?) {
+        self.uploadImage(image: image) { (image) in
+            guard let image = image else {
+                completion?(nil)
+                return
+            }
+            
+            let imageViewModel = ImageViewModel(image)
+            
+            DatabaseWorker().saveImage(image: imageViewModel, completion: { (error) in
+                guard error == nil else {
+                    //print("Error saving: \(error!.localizedDescription)")
+                    completion?(nil)
+                    return
+                }
+                completion?(imageViewModel)
+            })
+        }
+    }
+    
+    private func uploadImage(image: UIImage, completion:((_ image: Image?) -> Void)?) {
         let thumnail = image.resize(width: ImageWorker.thumbnailSize)
         if let imageData = image.jpegData(), let thumbnailData = thumnail.jpegData()  {
             let imageID = Database().generateID()
             
-            let imageName = "\(imageID)/\(ImageWorker.originalName)"
-            let thumbnailName = "\(imageID)/\(ImageWorker.thumbnailName)"
+            let imageName = self.imagePath(with: imageID, path: .original)
+            let thumbnailName = self.imagePath(with: imageID, path: .thumbnail)
             
             var imageUrl: String? = nil
             var thumbnailUrl: String? = nil
@@ -55,5 +73,11 @@ class ImageWorker {
             }
             
         }
+    }
+}
+
+private extension ImageWorker {
+    func imagePath(with id: String, path: ImageViewModel.Path ) -> String {
+        return "\(id)/\(path.rawValue).jpg"
     }
 }

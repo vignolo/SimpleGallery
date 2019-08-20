@@ -11,5 +11,28 @@ import Foundation
 struct ImageViewModel {
     private var image: Image
     
+    enum Path: String {
+        case original = "original"
+        case thumbnail = "thumbnail"
+    }
     
+    init(_ image: Image) {
+        self.image = image
+    }
+    
+    init?(dictionary: Dictionary<String, Any>) {
+        guard
+            let id = dictionary.keys.first,
+            let values = dictionary[id] as? [String: Any],
+            let original = values[Path.original.rawValue] as? String,
+            let thumbnail = values[Path.thumbnail.rawValue] as? String else { return nil }
+        
+        self.image = Image(id: id, original: original, thumbnail: thumbnail)
+    }
+}
+
+extension ImageViewModel {
+    func dictionary() -> Dictionary<String, Any> {
+        return [image.id: [Path.original.rawValue : image.original, Path.thumbnail.rawValue : image.thumbnail]]
+    }
 }

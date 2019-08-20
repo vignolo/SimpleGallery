@@ -17,7 +17,15 @@ class ImagesViewModel {
         return self.images.value.count
     }
     
+    func image(at index:Int) -> ImageViewModel {
+        return self.images.value[index]
+    }
+    
     func fetch() {
-        //
+        self.fetching.value = true
+        DatabaseWorker().fetchImages { (images) in
+            self.images.value = images
+            self.fetching.value = false
+        }
     }
 }
