@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import Kingfisher
 
 class ImageCollectionViewCell: UICollectionViewCell {
     
@@ -32,11 +33,14 @@ class ImageCollectionViewCell: UICollectionViewCell {
     
     func configureView() {
         self.imageView.backgroundColor = UIColor.gray.withAlphaComponent(0.3)
+        self.imageView.contentMode = .scaleAspectFill
+        self.imageView.clipsToBounds = true
         self.contentView.addSubview(self.imageView)
     }
     
     func configure(viewModel: ImageViewModel) {
-        // Download Image
+        let imageURL = URL(string: viewModel.thumbnail)
+        self.imageView.kf.setImage(with: imageURL)
     }
     
     override func layoutSubviews() {

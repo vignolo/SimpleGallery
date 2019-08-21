@@ -10,6 +10,12 @@ import Foundation
 
 struct ImageViewModel {
     private var image: Image
+    var original: String {
+        return self.image.original
+    }
+    var thumbnail: String {
+        return self.image.thumbnail
+    }
     
     enum Path: String {
         case original = "original"

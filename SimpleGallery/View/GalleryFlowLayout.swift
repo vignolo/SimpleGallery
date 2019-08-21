@@ -20,7 +20,7 @@ class GalleryFlowLayout: UICollectionViewFlowLayout {
         guard let collectionView = collectionView else { return }
 
         let collectionViewWidth = collectionView.bounds.size.width
-        let cellWidth = ((collectionViewWidth - (spacing * 3)) / items).rounded(.down)
+        let cellWidth = ((collectionViewWidth - (spacing * items)) / items).rounded(.down)
         self.itemSize = CGSize(width: cellWidth, height: cellWidth)
         self.minimumLineSpacing = spacing
         self.minimumInteritemSpacing = 0
