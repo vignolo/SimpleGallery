@@ -40,7 +40,8 @@ class ImageCollectionViewCell: UICollectionViewCell {
     
     func configure(viewModel: ImageViewModel) {
         let imageURL = URL(string: viewModel.thumbnail)
-        self.imageView.kf.setImage(with: imageURL)
+        self.imageView.kf.indicatorType = .activity
+        self.imageView.kf.setImage(with: imageURL, options: [.transition(.fade(0.2))])
     }
     
     override func layoutSubviews() {
