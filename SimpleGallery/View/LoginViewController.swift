@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import IHProgressHUD
 
 class LoginViewController: UIViewController {
     
@@ -31,7 +32,9 @@ class LoginViewController: UIViewController {
     
     @objc func login() {
         if let email = self.emailTextField.text, let password = self.passwordTextField.text {
+            IHProgressHUD.show()
             self.sessionViewModel.signIn(with: email, password: password) { (success, error) in
+                IHProgressHUD.dismiss()
                 if success {
                     self.loginSucceed()
                 } else {
@@ -46,9 +49,8 @@ class LoginViewController: UIViewController {
     }
     
     func loginFail(error: Error?) {
-        // TODO: Show Alert
-        let errorMessage = error.debugDescription 
-        print("Error: \(errorMessage)")
+        let errorMessage = error?.localizedDescription
+        IHProgressHUD.showError(withStatus: errorMessage)
     }
     
 }

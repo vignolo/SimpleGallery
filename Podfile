@@ -12,6 +12,7 @@ target 'SimpleGallery' do
   pod 'Firebase/Core'
   pod 'Firebase/Firestore'
   pod 'Kingfisher'
+  pod 'IHProgressHUD'
 
   target 'SimpleGalleryTests' do
     inherit! :search_paths

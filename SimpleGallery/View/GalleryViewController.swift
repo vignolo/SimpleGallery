@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import IHProgressHUD
 
 class GalleryViewController: UIViewController {
     
@@ -18,7 +19,6 @@ class GalleryViewController: UIViewController {
     var sessionViewModel = SessionViewModel()
     var imagesViewModel = ImagesViewModel()
     var imagePickerViewController = ImagePickerViewController()
-    var activityIndicatorView = UIActivityIndicatorView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,11 +31,6 @@ class GalleryViewController: UIViewController {
         }
         self.configureView()
         self.bind()
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        
         self.imagesViewModel.fetch()
     }
     
@@ -46,9 +41,9 @@ class GalleryViewController: UIViewController {
         self.collectionView.register(ImageCollectionViewCell.self, forCellWithReuseIdentifier: ImageCollectionViewCell.identifier)
         self.collectionView.collectionViewLayout = GalleryFlowLayout()
         
-        self.imagePickerViewController.completion = { [weak self] image in
+        self.imagePickerViewController.completion = { [unowned self] image in
             if let image = image {
-                self?.uploadImage(image: image)
+                self.uploadImage(image: image)
             }
         }
     }
@@ -58,7 +53,7 @@ class GalleryViewController: UIViewController {
             self.collectionView.reloadData()
         }
         self.imagesViewModel.fetching.bind { [unowned self] (fetching) in
-            self.activityIndicatorView.isHidden = !fetching
+            fetching ? IHProgressHUD.show() : IHProgressHUD.dismiss()
         }
     }
     
@@ -72,13 +67,13 @@ class GalleryViewController: UIViewController {
     }
     
     func uploadImage(image: UIImage) {
+        IHProgressHUD.show()
         ImageWorker().uploadAndSave(image: image) { [weak self] image in
             if image != nil {
-                // Success. Show error and reload list
                 self?.imagesViewModel.fetch()
                 return
             }
-            // Show Error.
+            IHProgressHUD.showError(withStatus: "Error uploading the image")
         }
     }
     
