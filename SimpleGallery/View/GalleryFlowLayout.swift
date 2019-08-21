@@ -11,7 +11,7 @@ import UIKit
 
 class GalleryFlowLayout: UICollectionViewFlowLayout {
     
-    private var spacing: CGFloat = 2
+    private var spacing: CGFloat = 3
     private var items: CGFloat = 3
     
     override func prepare() {
@@ -20,7 +20,7 @@ class GalleryFlowLayout: UICollectionViewFlowLayout {
         guard let collectionView = collectionView else { return }
 
         let collectionViewWidth = collectionView.bounds.size.width
-        let cellWidth = ((collectionViewWidth - (spacing * items)) / items).rounded(.down)
+        let cellWidth = ((collectionViewWidth - spacing * (items + 1)) / items).rounded(.down)
         self.itemSize = CGSize(width: cellWidth, height: cellWidth)
         self.minimumLineSpacing = spacing
         self.minimumInteritemSpacing = 0
