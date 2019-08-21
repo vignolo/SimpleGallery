@@ -13,22 +13,21 @@ class ImageWorker {
     
     static let thumbnailSize: CGFloat = 200
     
-    func uploadAndSave(image: UIImage, completion:((_ image: ImageViewModel?) -> Void)?) {
+    func uploadAndSave(image: UIImage, completion:((_ image: ImageViewModel?, _ error: FileError?) -> Void)?) {
         self.uploadImage(image: image) { (image) in
             guard let image = image else {
-                completion?(nil)
+                completion?(nil, FileError.uploading)
                 return
             }
             
             let imageViewModel = ImageViewModel(image)
-            
             DatabaseWorker().saveImage(image: imageViewModel, completion: { (error) in
                 guard error == nil else {
-                    //print("Error saving: \(error!.localizedDescription)")
-                    completion?(nil)
+                    completion?(nil, FileError.saving)
                     return
                 }
-                completion?(imageViewModel)
+                let imageViewModel = ImageViewModel(image)
+                completion?(imageViewModel, nil)
             })
         }
     }
@@ -74,6 +73,20 @@ class ImageWorker {
             
         }
     }
+    
+    func deleteImage(with id: String, completion: ((_ error: FileError?) -> Void)?) {
+        DatabaseWorker().deleteImage(with: id) { (error) in
+            guard error == nil else {
+                completion?(FileError.deleting)
+                return
+            }
+            let storageWorker = StorageWorker()
+            storageWorker.deleteImage(with: self.imagePath(with: id, path: .thumbnail), completion: nil)
+            storageWorker.deleteImage(with: self.imagePath(with: id, path: .original), completion: nil)
+            completion?(nil)
+        }
+    }
+
 }
 
 private extension ImageWorker {

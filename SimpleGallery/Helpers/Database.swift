@@ -17,8 +17,8 @@ class Database {
         case images = "images"
     }
     
-    func save(data: [String: Any], path: Path, completion: ((_ error: Error?) -> Void)?) {
-        self.db.collection(path.rawValue).addDocument(data: data, completion: completion)
+    func save(data: [String: Any], id: String, path: Path, completion: ((_ error: Error?) -> Void)?) {
+        self.db.collection(path.rawValue).document(id).setData(data, completion: completion)
     }
     
     func fetch(path: Path, completion: @escaping ((_ result: Array<[String: Any]>?) -> Void)) {
@@ -31,6 +31,10 @@ class Database {
             
             completion(snapshot.documents.compactMap({$0.data()}))            
         }
+    }
+    
+    func delete(with id: String, path: Path, completion: ((_ error: Error?) -> Void)?) {
+        self.db.collection(path.rawValue).document(id).delete(completion: completion)
     }
     
 }

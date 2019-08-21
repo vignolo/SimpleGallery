@@ -20,6 +20,13 @@ class Storage {
         case image = "image/jpeg"
     }
     
+    func delete(with id: String, path: Path, completion: ((_ error:FileError?) -> Void)?) {
+        let fileRef = FIRStorage.storage().reference().child(path.rawValue).child(id)
+        fileRef.delete { (error) in
+            (error != nil) ? completion?(FileError.custom(description: error!.localizedDescription)) : completion?(nil)
+        }
+    }
+    
     func upload(data: Data, path: Path, name:String, type: FileType, completion:((_ urlString: String?) -> Void)?) {
         let fileRef = FIRStorage.storage().reference().child(path.rawValue).child(name)
         let metadata = StorageMetadata()

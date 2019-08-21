@@ -35,6 +35,7 @@ class GalleryViewController: UIViewController {
     }
     
     func configureView() {
+        self.title = "Gallery"
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(showImagePicker))
         self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Sign Out", style: .plain, target: self, action: #selector(signOut))
         
@@ -52,8 +53,14 @@ class GalleryViewController: UIViewController {
         self.imagesViewModel.images.bind { [unowned self] (_) in
             self.collectionView.reloadData()
         }
-        self.imagesViewModel.fetching.bind { [unowned self] (fetching) in
+        self.imagesViewModel.fetching.bind { (fetching) in
             fetching ? IHProgressHUD.show() : IHProgressHUD.dismiss()
+        }
+        self.imagesViewModel.uploading.bind { (uploading) in
+            uploading ? IHProgressHUD.show() : IHProgressHUD.dismiss()
+        }
+        self.imagesViewModel.deleting.bind { (deleting) in
+            deleting ? IHProgressHUD.show() : IHProgressHUD.dismiss()
         }
     }
     
@@ -66,14 +73,28 @@ class GalleryViewController: UIViewController {
         self.navigator?.navigate(to: .custom(viewController: self.imagePickerViewController), mode: .present)
     }
     
+    func showImageActions(image: ImageViewModel) {
+        let actionController = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
+        actionController.addAction(UIAlertAction(title: "Delete", style: .destructive, handler: { (action) in
+            self.deleteImage(image: image)
+        }))
+        actionController.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+        self.navigator?.navigate(to: .custom(viewController: actionController), mode: .present, animated: true)
+    }
+    
     func uploadImage(image: UIImage) {
-        IHProgressHUD.show()
-        ImageWorker().uploadAndSave(image: image) { [weak self] image in
-            if image != nil {
-                self?.imagesViewModel.fetch()
-                return
+        self.imagesViewModel.upload(image: image) { (error) in
+            if error != nil {
+                IHProgressHUD.showError(withStatus: error?.description)
             }
-            IHProgressHUD.showError(withStatus: "Error uploading the image")
+        }        
+    }
+    
+    func deleteImage(image: ImageViewModel) {
+        self.imagesViewModel.delete(image: image) { (error) in
+            if error != nil {
+                IHProgressHUD.showError(withStatus: error?.description)
+            }
         }
     }
     
@@ -89,5 +110,12 @@ extension GalleryViewController: UICollectionViewDataSource {
         let imageViewModel = self.imagesViewModel.image(at: indexPath.row)
         cell.configure(viewModel: imageViewModel)
         return cell
+    }
+}
+
+extension GalleryViewController: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let imageViewModel = self.imagesViewModel.image(at: indexPath.row)
+        self.showImageActions(image: imageViewModel)
     }
 }

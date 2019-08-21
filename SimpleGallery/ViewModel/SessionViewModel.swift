@@ -17,13 +17,18 @@ class SessionViewModel {
     var userExist: Bool {
         return user != nil
     }
+    var signingIn: Bindable<Bool> = Bindable(false)
     
     func isValidSession(completion: @escaping (_ valid: Bool) -> Void) {
-        session.isValidSession(completion: completion)
+        self.session.isValidSession(completion: completion)
     }
     
     func signIn(with email: String, password: String, completion: @escaping ((_ sucess: Bool, _ error: Error?) -> Void)) {
-        self.session.signIn(with: email, password: password, completion: completion)
+        self.signingIn.value = true
+        self.session.signIn(with: email, password: password) { (success, error) in
+            self.signingIn.value = false
+            completion(success, error)
+        }
     }
     
     func signOut() {

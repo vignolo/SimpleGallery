@@ -10,6 +10,9 @@ import Foundation
 
 struct ImageViewModel {
     private var image: Image
+    var id: String {
+        return self.image.id
+    }
     var original: String {
         return self.image.original
     }

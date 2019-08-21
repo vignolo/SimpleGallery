@@ -21,6 +21,7 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = "Login"
         
         self.navigator = Navigator(sender: self)
         self.loginButton.addTarget(self, action: #selector(login), for: .touchUpInside)
@@ -28,13 +29,19 @@ class LoginViewController: UIViewController {
         if SessionViewModel().userExist {
             self.navigator?.navigate(to: .gallery, mode: .push, animated: false)
         }
+        
+        self.bind()
+    }
+    
+    func bind() {
+        self.sessionViewModel.signingIn.bind { (signingIn) in
+            signingIn ? IHProgressHUD.show() : IHProgressHUD.dismiss()
+        }
     }
     
     @objc func login() {
         if let email = self.emailTextField.text, let password = self.passwordTextField.text {
-            IHProgressHUD.show()
             self.sessionViewModel.signIn(with: email, password: password) { (success, error) in
-                IHProgressHUD.dismiss()
                 if success {
                     self.loginSucceed()
                 } else {

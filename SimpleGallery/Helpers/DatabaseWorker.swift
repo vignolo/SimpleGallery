@@ -13,7 +13,7 @@ class DatabaseWorker {
     func saveImage(image: ImageViewModel, completion: ((_ error: Error?) -> Void)?) {
         
         let imageDictionary = image.dictionary()
-        Database().save(data: imageDictionary, path: .images) { (error) in
+        Database().save(data: imageDictionary, id: image.id, path: .images) { (error) in
             completion?(error)
         }
     }
@@ -23,6 +23,10 @@ class DatabaseWorker {
             let array = images?.compactMap({ ImageViewModel(dictionary: $0) }) ?? []
             completion?(array)
         }
+    }
+    
+    func deleteImage(with id: String, completion: ((_ error: Error?) -> Void)?) {
+        Database().delete(with: id, path: .images, completion: completion)
     }
     
 }
