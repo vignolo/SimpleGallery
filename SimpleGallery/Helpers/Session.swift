@@ -33,9 +33,13 @@ class Session {
         try! Auth.auth().signOut()
     }
     
-    func signIn(with email: String, password: String, completion: @escaping ((_ sucess: Bool, _ error: Error?) -> Void)) {
+    func signIn(with email: String, password: String, completion: @escaping ((_ sucess: Bool, _ error: SessionError?) -> Void)) {
         Auth.auth().signIn(withEmail: email, password: password) { (result, error) in
-            completion(result != nil, error)
+            guard error == nil else {
+                completion(false, SessionError.custom(description: error!.localizedDescription))
+                return
+            }
+            completion(true, nil)
         }
     }
 }

@@ -13,6 +13,9 @@
 		FF499E2D230E03AA00EAC3A2 /* FileError.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF499E2C230E03A900EAC3A2 /* FileError.swift */; };
 		FF499E2E230E03AA00EAC3A2 /* FileError.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF499E2C230E03A900EAC3A2 /* FileError.swift */; };
 		FF499E2F230E03AA00EAC3A2 /* FileError.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF499E2C230E03A900EAC3A2 /* FileError.swift */; };
+		FF499E31230EE8AA00EAC3A2 /* SessionError.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF499E30230EE8AA00EAC3A2 /* SessionError.swift */; };
+		FF499E32230EE8AA00EAC3A2 /* SessionError.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF499E30230EE8AA00EAC3A2 /* SessionError.swift */; };
+		FF499E33230EE8AA00EAC3A2 /* SessionError.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF499E30230EE8AA00EAC3A2 /* SessionError.swift */; };
 		FF4D5F462303379700FF1D57 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF4D5F452303379700FF1D57 /* UserViewModel.swift */; };
 		FF4D5F472303379700FF1D57 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF4D5F452303379700FF1D57 /* UserViewModel.swift */; };
 		FF4D5F482303379700FF1D57 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF4D5F452303379700FF1D57 /* UserViewModel.swift */; };
@@ -121,6 +124,7 @@
 		C8C621D9C9EDA89CCC58297C /* Pods_SimpleGallery.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SimpleGallery.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCCBEDEF89F87F7017B87C92 /* Pods-SimpleGalleryTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleGalleryTests.debug.xcconfig"; path = "Target Support Files/Pods-SimpleGalleryTests/Pods-SimpleGalleryTests.debug.xcconfig"; sourceTree = "<group>"; };
 		FF499E2C230E03A900EAC3A2 /* FileError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileError.swift; sourceTree = "<group>"; };
+		FF499E30230EE8AA00EAC3A2 /* SessionError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionError.swift; sourceTree = "<group>"; };
 		FF4D5F452303379700FF1D57 /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
 		FF4D5F4923033BD400FF1D57 /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
 		FF4D5F4D2303713900FF1D57 /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
@@ -331,6 +335,7 @@
 				FF957E5B2306112D00BE2186 /* UIImage.swift */,
 				FFFC42A4230B0E4B00C3139E /* DatabaseWorker.swift */,
 				FF499E2C230E03A900EAC3A2 /* FileError.swift */,
+				FF499E30230EE8AA00EAC3A2 /* SessionError.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -569,6 +574,7 @@
 				FFDF5A2A2305F9890051DB53 /* Database.swift in Sources */,
 				FF74CEAD230235D900A4AD30 /* ImagePickerViewController.swift in Sources */,
 				FF74CEB22302375700A4AD30 /* ImageViewModel.swift in Sources */,
+				FF499E31230EE8AA00EAC3A2 /* SessionError.swift in Sources */,
 				FF95917C23030BB000381EC1 /* Bindable.swift in Sources */,
 				FF4D5F4A23033BD400FF1D57 /* Session.swift in Sources */,
 				FF4D5F462303379700FF1D57 /* UserViewModel.swift in Sources */,
@@ -600,6 +606,7 @@
 				FFDF5A2B2305F9890051DB53 /* Database.swift in Sources */,
 				FF74CEAE230235D900A4AD30 /* ImagePickerViewController.swift in Sources */,
 				FF74CEB32302375700A4AD30 /* ImageViewModel.swift in Sources */,
+				FF499E32230EE8AA00EAC3A2 /* SessionError.swift in Sources */,
 				FF95917D23030BB000381EC1 /* Bindable.swift in Sources */,
 				FF4D5F4B23033BD400FF1D57 /* Session.swift in Sources */,
 				FF4D5F472303379700FF1D57 /* UserViewModel.swift in Sources */,
@@ -631,6 +638,7 @@
 				FFDF5A2C2305F9890051DB53 /* Database.swift in Sources */,
 				FF74CEAF230235D900A4AD30 /* ImagePickerViewController.swift in Sources */,
 				FF74CEB42302375700A4AD30 /* ImageViewModel.swift in Sources */,
+				FF499E33230EE8AA00EAC3A2 /* SessionError.swift in Sources */,
 				FF95917E23030BB000381EC1 /* Bindable.swift in Sources */,
 				FF4D5F4C23033BD400FF1D57 /* Session.swift in Sources */,
 				FF4D5F482303379700FF1D57 /* UserViewModel.swift in Sources */,

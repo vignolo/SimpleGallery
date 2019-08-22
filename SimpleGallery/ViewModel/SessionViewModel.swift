@@ -23,7 +23,7 @@ class SessionViewModel {
         self.session.isValidSession(completion: completion)
     }
     
-    func signIn(with email: String, password: String, completion: @escaping ((_ sucess: Bool, _ error: Error?) -> Void)) {
+    func signIn(with email: String, password: String, completion: @escaping ((_ sucess: Bool, _ error: SessionError?) -> Void)) {
         self.signingIn.value = true
         self.session.signIn(with: email, password: password) { (success, error) in
             self.signingIn.value = false

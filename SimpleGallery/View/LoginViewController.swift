@@ -55,9 +55,8 @@ class LoginViewController: UIViewController {
         self.navigator?.navigate(to: .gallery)
     }
     
-    func loginFail(error: Error?) {
-        let errorMessage = error?.localizedDescription
-        IHProgressHUD.showError(withStatus: errorMessage)
+    func loginFail(error: SessionError?) {
+        IHProgressHUD.showError(withStatus: error?.description)
     }
     
 }
