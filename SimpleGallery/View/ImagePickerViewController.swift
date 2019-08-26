@@ -9,8 +9,10 @@
 import Foundation
 import UIKit
 
+/// Subclass UIImagePickerController
 class ImagePickerViewController: UIImagePickerController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
+    /// block invoqued at the end of the picking proccess. Return image:UIImage or nil if user cancel
     var completion: ((UIImage?) -> Void)?
     
     override func viewDidLoad() {

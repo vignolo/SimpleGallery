@@ -13,6 +13,13 @@ class Navigator: NavigatorProtocol {
     
     var navigationController: UINavigationController?
     
+    /// Navigator destinations
+    ///
+    /// - login: login view
+    /// - gallery: gallery view
+    /// - imageDetail: image details view
+    /// - imagePicker: image picker
+    /// - custom: use this option to push a custom view controller
     enum Destination {
         case login
         case gallery
@@ -21,6 +28,10 @@ class Navigator: NavigatorProtocol {
         case custom(viewController: UIViewController)
     }
     
+    /// Navigation mode
+    ///
+    /// - push: push the view controller to the navigationController stack
+    /// - present: present the view controller based on the current modalTransitionStyle. normaly .coverVertical
     enum Mode {
         case push
         case present
@@ -30,6 +41,12 @@ class Navigator: NavigatorProtocol {
         self.navigationController = sender.navigationController
     }
     
+    /// Navigate to a Destination
+    ///
+    /// - Parameters:
+    ///   - destination: the destination were to navigato
+    ///   - mode: navigation mode
+    ///   - animated: bool telling if navigation shoud be animated. Default is true
     func navigate(to destination: Destination, mode:Mode = .push, animated:Bool = true) {
         
         let viewController = self.viewController(for: destination)
@@ -42,10 +59,17 @@ class Navigator: NavigatorProtocol {
         }
     }
     
+    /// Navigate to root view in the navigationController
+    ///
+    /// - Parameter animated: bool telling if navigation shoud be animated. Default is true
     func navigateToRoot(animated: Bool = true) {
         self.navigationController?.popToRootViewController(animated: animated)
     }
     
+    /// Instanciate and return view controller depending on the Destination
+    ///
+    /// - destination: the destination
+    /// - Returns: returns a instanciated view controller
     private func viewController(for destination: Destination) -> UIViewController {
         
         switch destination {

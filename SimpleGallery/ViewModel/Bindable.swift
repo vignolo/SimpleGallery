@@ -8,6 +8,7 @@
 
 import Foundation
 
+/// Bindable class. Use this to allow properties to notify for changes.
 class Bindable<T> {
     typealias Listener = (T) -> Void
     var listener: Listener?

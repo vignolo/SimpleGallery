@@ -8,6 +8,11 @@
 
 import Foundation
 
+/// Custom error for Session operations
+///
+/// - wrongCredentials: Return this for wrong credeentials used on authentication
+/// - expired: Return this if stored credentials are expired or invalidated and can not be renewed automaticaly
+/// - custom: Return this for custom error message description
 enum SessionError: Error {
     
     case wrongCredentials

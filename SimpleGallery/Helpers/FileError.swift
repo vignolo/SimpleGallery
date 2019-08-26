@@ -8,6 +8,12 @@
 
 import Foundation
 
+/// Custom Error for files operations
+///
+/// - uploading: Return this if a upload to storage operation fails
+/// - saving: Return this id saving to database operation fails
+/// - deleting: Return this is deleting file from database fails
+/// - custom: Return this for custom error message description
 enum FileError: Error {
     
     case uploading

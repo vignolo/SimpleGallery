@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 
+/// Custom gallery layout
 class GalleryFlowLayout: UICollectionViewFlowLayout {
     
     private var spacing: CGFloat = 3

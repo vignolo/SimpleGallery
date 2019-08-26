@@ -29,6 +29,9 @@ struct ImageViewModel {
         self.image = image
     }
     
+    /// Custom init from dictionary. TODO: This should be moved to Image or a decoder helper
+    ///
+    /// - Parameter dictionary: Dictionary
     init?(dictionary: Dictionary<String, Any>) {
         guard
             let id = dictionary.keys.first,

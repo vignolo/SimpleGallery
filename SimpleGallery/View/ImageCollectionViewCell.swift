@@ -10,6 +10,7 @@ import Foundation
 import UIKit
 import Kingfisher
 
+/// Subclass UICollectionViewCell
 class ImageCollectionViewCell: UICollectionViewCell {
     
     static let identifier = "ImageCollectionViewCell"
@@ -40,12 +41,14 @@ class ImageCollectionViewCell: UICollectionViewCell {
     
     func configure(viewModel: ImageViewModel) {
         let imageURL = URL(string: viewModel.thumbnail)
+        // User Kingfished for image download and setting.
         self.imageView.kf.indicatorType = .activity
         self.imageView.kf.setImage(with: imageURL, options: [.transition(.fade(0.2))])
     }
     
     override func layoutSubviews() {
         super.layoutSubviews()
+        // No need for Layout Constrints. It's a simple image cell
         self.imageView.frame = self.contentView.frame
     }
 }

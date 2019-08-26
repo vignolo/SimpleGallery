@@ -8,6 +8,7 @@
 
 import Foundation
 
+/// Image model
 struct Image {
     var id: String
     var original: String

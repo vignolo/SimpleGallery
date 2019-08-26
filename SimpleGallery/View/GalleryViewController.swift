@@ -24,13 +24,17 @@ class GalleryViewController: UIViewController {
         super.viewDidLoad()
         
         self.navigator = Navigator(sender: self)
+        // Check if the current session is still valid. This will prevent a disabled user to use the app.
         self.sessionViewModel.isValidSession { [weak self] valid in
             if !valid {
                 self?.signOut()
             }
         }
+        // Configure UI
         self.configureView()
+        // Bind UI to actions and status
         self.bind()
+        // Fetch current images
         self.imagesViewModel.fetch()
     }
     
@@ -64,6 +68,7 @@ class GalleryViewController: UIViewController {
         }
     }
     
+    /// Sign Out action. Sign Out the current user and navigate to login screen
     @objc func signOut() {
         self.sessionViewModel.signOut()
         self.navigator?.navigateToRoot()
@@ -73,6 +78,9 @@ class GalleryViewController: UIViewController {
         self.navigator?.navigate(to: .custom(viewController: self.imagePickerViewController), mode: .present)
     }
     
+    /// Show Images action. TODO: Replace this with collection view edit mode
+    ///
+    /// - Parameter image: The to take action with
     func showImageActions(image: ImageViewModel) {
         let actionController = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
         actionController.addAction(UIAlertAction(title: "Delete", style: .destructive, handler: { (action) in
@@ -82,6 +90,9 @@ class GalleryViewController: UIViewController {
         self.navigator?.navigate(to: .custom(viewController: actionController), mode: .present, animated: true)
     }
     
+    /// Upload image action
+    ///
+    /// - Parameter image: UIImage to upload returned from the Image Picker
     func uploadImage(image: UIImage) {
         self.imagesViewModel.upload(image: image) { (error) in
             if error != nil {
@@ -90,6 +101,9 @@ class GalleryViewController: UIViewController {
         }        
     }
     
+    /// Delete image action
+    ///
+    /// - Parameter image: ImageViewModel to delete
     func deleteImage(image: ImageViewModel) {
         self.imagesViewModel.delete(image: image) { (error) in
             if error != nil {
@@ -100,6 +114,7 @@ class GalleryViewController: UIViewController {
     
 }
 
+// MARK: - UICollectionViewDataSource
 extension GalleryViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return self.imagesViewModel.count
@@ -113,6 +128,8 @@ extension GalleryViewController: UICollectionViewDataSource {
     }
 }
 
+// MARK: - UICollectionViewDelegate.
+// TODO: didSelectItemAt should navigate to Navigator.imageDetail
 extension GalleryViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let imageViewModel = self.imagesViewModel.image(at: indexPath.row)

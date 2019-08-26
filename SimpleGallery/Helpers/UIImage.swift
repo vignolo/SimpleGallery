@@ -9,12 +9,18 @@
 import UIKit
 
 extension UIImage {
+    
+    /// Default image quality for thumbnails
     static let defaultJpegQuality: CGFloat = 0.5
     
     func jpegData() -> Data? {
         return self.jpegData(compressionQuality: UIImage.defaultJpegQuality)
     }
     
+    /// Resize a image to a specific width maintaining aspect ratio.
+    ///
+    /// - Parameter width: New image width
+    /// - Returns: UIImage
     func resize(width: CGFloat) -> UIImage {
         let scale = width / self.size.width
         let height = self.size.height * scale

@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 
+/// Not impplemented yet.
 class ImageDetailViewController: UIViewController {
     private var image: Image
     
