@@ -22,9 +22,9 @@
 		FF4D5F4A23033BD400FF1D57 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF4D5F4923033BD400FF1D57 /* Session.swift */; };
 		FF4D5F4B23033BD400FF1D57 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF4D5F4923033BD400FF1D57 /* Session.swift */; };
 		FF4D5F4C23033BD400FF1D57 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF4D5F4923033BD400FF1D57 /* Session.swift */; };
-		FF4D5F4E2303713900FF1D57 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF4D5F4D2303713900FF1D57 /* LoginViewController.xib */; };
-		FF4D5F4F2303713900FF1D57 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF4D5F4D2303713900FF1D57 /* LoginViewController.xib */; };
-		FF4D5F502303713900FF1D57 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF4D5F4D2303713900FF1D57 /* LoginViewController.xib */; };
+		FF4D5F4E2303713900FF1D57 /* SignInViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF4D5F4D2303713900FF1D57 /* SignInViewController.xib */; };
+		FF4D5F4F2303713900FF1D57 /* SignInViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF4D5F4D2303713900FF1D57 /* SignInViewController.xib */; };
+		FF4D5F502303713900FF1D57 /* SignInViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF4D5F4D2303713900FF1D57 /* SignInViewController.xib */; };
 		FF74CE9C2302140900A4AD30 /* NavigatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF74CE9B2302140900A4AD30 /* NavigatorProtocol.swift */; };
 		FF74CE9D2302140900A4AD30 /* NavigatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF74CE9B2302140900A4AD30 /* NavigatorProtocol.swift */; };
 		FF74CE9E2302140900A4AD30 /* NavigatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF74CE9B2302140900A4AD30 /* NavigatorProtocol.swift */; };
@@ -66,9 +66,9 @@
 		FFB062C22301EE0600FAD1DF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFB062C02301EE0600FAD1DF /* LaunchScreen.storyboard */; };
 		FFB062CD2301EE0600FAD1DF /* SimpleGalleryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB062CC2301EE0600FAD1DF /* SimpleGalleryTests.swift */; };
 		FFB062D82301EE0600FAD1DF /* SimpleGalleryUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB062D72301EE0600FAD1DF /* SimpleGalleryUITests.swift */; };
-		FFB062E72301FBAC00FAD1DF /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB062E62301FBAC00FAD1DF /* LoginViewController.swift */; };
-		FFB062E82301FBAC00FAD1DF /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB062E62301FBAC00FAD1DF /* LoginViewController.swift */; };
-		FFB062E92301FBAC00FAD1DF /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB062E62301FBAC00FAD1DF /* LoginViewController.swift */; };
+		FFB062E72301FBAC00FAD1DF /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB062E62301FBAC00FAD1DF /* SignInViewController.swift */; };
+		FFB062E82301FBAC00FAD1DF /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB062E62301FBAC00FAD1DF /* SignInViewController.swift */; };
+		FFB062E92301FBAC00FAD1DF /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB062E62301FBAC00FAD1DF /* SignInViewController.swift */; };
 		FFB062EB2301FC6100FAD1DF /* GalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB062EA2301FC6100FAD1DF /* GalleryViewController.swift */; };
 		FFB062EC2301FC6100FAD1DF /* GalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB062EA2301FC6100FAD1DF /* GalleryViewController.swift */; };
 		FFB062ED2301FC6100FAD1DF /* GalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB062EA2301FC6100FAD1DF /* GalleryViewController.swift */; };
@@ -127,7 +127,7 @@
 		FF499E30230EE8AA00EAC3A2 /* SessionError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionError.swift; sourceTree = "<group>"; };
 		FF4D5F452303379700FF1D57 /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
 		FF4D5F4923033BD400FF1D57 /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
-		FF4D5F4D2303713900FF1D57 /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		FF4D5F4D2303713900FF1D57 /* SignInViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SignInViewController.xib; sourceTree = "<group>"; };
 		FF74CE9B2302140900A4AD30 /* NavigatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigatorProtocol.swift; sourceTree = "<group>"; };
 		FF74CE9F2302147700A4AD30 /* Navigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Navigator.swift; sourceTree = "<group>"; };
 		FF74CEA42302157500A4AD30 /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
@@ -151,7 +151,7 @@
 		FFB062D32301EE0600FAD1DF /* SimpleGalleryUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SimpleGalleryUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFB062D72301EE0600FAD1DF /* SimpleGalleryUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleGalleryUITests.swift; sourceTree = "<group>"; };
 		FFB062D92301EE0600FAD1DF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FFB062E62301FBAC00FAD1DF /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		FFB062E62301FBAC00FAD1DF /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		FFB062EA2301FC6100FAD1DF /* GalleryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryViewController.swift; sourceTree = "<group>"; };
 		FFDF5A212304E2FA0051DB53 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		FFDF5A252305A1F30051DB53 /* SessionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionViewModel.swift; sourceTree = "<group>"; };
@@ -214,6 +214,33 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		FF3E1B7723157EC500049AB6 /* Worker */ = {
+			isa = PBXGroup;
+			children = (
+				FFEE85AE230453F3000CA5A0 /* ImageWorker.swift */,
+				FF957E572306052B00BE2186 /* StorageWorker.swift */,
+				FFFC42A4230B0E4B00C3139E /* DatabaseWorker.swift */,
+			);
+			path = Worker;
+			sourceTree = "<group>";
+		};
+		FF3E1B7823157F4C00049AB6 /* Error */ = {
+			isa = PBXGroup;
+			children = (
+				FF499E2C230E03A900EAC3A2 /* FileError.swift */,
+				FF499E30230EE8AA00EAC3A2 /* SessionError.swift */,
+			);
+			path = Error;
+			sourceTree = "<group>";
+		};
+		FF3E1B7923157F6200049AB6 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				FF957E5B2306112D00BE2186 /* UIImage.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 		FF74CEA32302156400A4AD30 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -261,11 +288,14 @@
 			isa = PBXGroup;
 			children = (
 				FFDF5A202304E0500051DB53 /* Credentials */,
-				FFEE85A9230452F7000CA5A0 /* Helpers */,
-				FF74CEB0230236FE00A4AD30 /* ViewModel */,
-				FF74CEA32302156400A4AD30 /* Model */,
+				FFEE85A9230452F7000CA5A0 /* Service */,
+				FF3E1B7823157F4C00049AB6 /* Error */,
+				FF3E1B7923157F6200049AB6 /* Extension */,
 				FFB062EE23020ABA00FAD1DF /* Navigator */,
+				FF74CEA32302156400A4AD30 /* Model */,
 				FFB062E52301FB5D00FAD1DF /* View */,
+				FF74CEB0230236FE00A4AD30 /* ViewModel */,
+				FF3E1B7723157EC500049AB6 /* Worker */,
 				FFB062B72301EE0500FAD1DF /* AppDelegate.swift */,
 				FFB062BE2301EE0600FAD1DF /* Assets.xcassets */,
 				FFB062C02301EE0600FAD1DF /* LaunchScreen.storyboard */,
@@ -295,12 +325,12 @@
 		FFB062E52301FB5D00FAD1DF /* View */ = {
 			isa = PBXGroup;
 			children = (
-				FFB062E62301FBAC00FAD1DF /* LoginViewController.swift */,
-				FF4D5F4D2303713900FF1D57 /* LoginViewController.xib */,
+				FFB062E62301FBAC00FAD1DF /* SignInViewController.swift */,
+				FF4D5F4D2303713900FF1D57 /* SignInViewController.xib */,
 				FFB062EA2301FC6100FAD1DF /* GalleryViewController.swift */,
+				FFEE85A523044B65000CA5A0 /* GalleryViewController.xib */,
 				FF74CEA82302169500A4AD30 /* ImageDetailViewController.swift */,
 				FF74CEAC230235D900A4AD30 /* ImagePickerViewController.swift */,
-				FFEE85A523044B65000CA5A0 /* GalleryViewController.xib */,
 				FFFC42A8230B6A1100C3139E /* ImageCollectionViewCell.swift */,
 				FFAD6D61230C4D8200524DAC /* GalleryFlowLayout.swift */,
 			);
@@ -324,20 +354,14 @@
 			path = Credentials;
 			sourceTree = "<group>";
 		};
-		FFEE85A9230452F7000CA5A0 /* Helpers */ = {
+		FFEE85A9230452F7000CA5A0 /* Service */ = {
 			isa = PBXGroup;
 			children = (
-				FFEE85AE230453F3000CA5A0 /* ImageWorker.swift */,
 				FFEE85B223048883000CA5A0 /* Storage.swift */,
 				FF4D5F4923033BD400FF1D57 /* Session.swift */,
 				FFDF5A292305F9890051DB53 /* Database.swift */,
-				FF957E572306052B00BE2186 /* StorageWorker.swift */,
-				FF957E5B2306112D00BE2186 /* UIImage.swift */,
-				FFFC42A4230B0E4B00C3139E /* DatabaseWorker.swift */,
-				FF499E2C230E03A900EAC3A2 /* FileError.swift */,
-				FF499E30230EE8AA00EAC3A2 /* SessionError.swift */,
 			);
-			path = Helpers;
+			path = Service;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -452,7 +476,7 @@
 				FFEE85A623044B65000CA5A0 /* GalleryViewController.xib in Resources */,
 				FFDF5A222304E2FA0051DB53 /* GoogleService-Info.plist in Resources */,
 				FFB062BF2301EE0600FAD1DF /* Assets.xcassets in Resources */,
-				FF4D5F4E2303713900FF1D57 /* LoginViewController.xib in Resources */,
+				FF4D5F4E2303713900FF1D57 /* SignInViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -460,7 +484,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FF4D5F4F2303713900FF1D57 /* LoginViewController.xib in Resources */,
+				FF4D5F4F2303713900FF1D57 /* SignInViewController.xib in Resources */,
 				FFEE85A723044B65000CA5A0 /* GalleryViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -469,7 +493,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FF4D5F502303713900FF1D57 /* LoginViewController.xib in Resources */,
+				FF4D5F502303713900FF1D57 /* SignInViewController.xib in Resources */,
 				FFEE85A823044B65000CA5A0 /* GalleryViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -570,7 +594,7 @@
 				FF74CEA52302157500A4AD30 /* Image.swift in Sources */,
 				FFFC42A9230B6A1100C3139E /* ImageCollectionViewCell.swift in Sources */,
 				FF957E5C2306112D00BE2186 /* UIImage.swift in Sources */,
-				FFB062E72301FBAC00FAD1DF /* LoginViewController.swift in Sources */,
+				FFB062E72301FBAC00FAD1DF /* SignInViewController.swift in Sources */,
 				FFDF5A2A2305F9890051DB53 /* Database.swift in Sources */,
 				FF74CEAD230235D900A4AD30 /* ImagePickerViewController.swift in Sources */,
 				FF74CEB22302375700A4AD30 /* ImageViewModel.swift in Sources */,
@@ -616,7 +640,7 @@
 				FF957E592306052B00BE2186 /* StorageWorker.swift in Sources */,
 				FF74CE9D2302140900A4AD30 /* NavigatorProtocol.swift in Sources */,
 				FF9591812303355000381EC1 /* User.swift in Sources */,
-				FFB062E82301FBAC00FAD1DF /* LoginViewController.swift in Sources */,
+				FFB062E82301FBAC00FAD1DF /* SignInViewController.swift in Sources */,
 				FFEE85B0230453F3000CA5A0 /* ImageWorker.swift in Sources */,
 				FFAD6D63230C4D8200524DAC /* GalleryFlowLayout.swift in Sources */,
 				FFEE85B423048883000CA5A0 /* Storage.swift in Sources */,
@@ -648,7 +672,7 @@
 				FF957E5A2306052B00BE2186 /* StorageWorker.swift in Sources */,
 				FF74CE9E2302140900A4AD30 /* NavigatorProtocol.swift in Sources */,
 				FF9591822303355000381EC1 /* User.swift in Sources */,
-				FFB062E92301FBAC00FAD1DF /* LoginViewController.swift in Sources */,
+				FFB062E92301FBAC00FAD1DF /* SignInViewController.swift in Sources */,
 				FFEE85B1230453F3000CA5A0 /* ImageWorker.swift in Sources */,
 				FFAD6D64230C4D8200524DAC /* GalleryFlowLayout.swift in Sources */,
 				FFEE85B523048883000CA5A0 /* Storage.swift in Sources */,
@@ -810,13 +834,14 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9425Q3J45Y;
 				INFOPLIST_FILE = SimpleGallery/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.vignolo.SimpleGallery;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -829,13 +854,14 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9425Q3J45Y;
 				INFOPLIST_FILE = SimpleGallery/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.vignolo.SimpleGallery;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

@@ -1,5 +1,5 @@
 //
-//  LoginViewController.swift
+//  SignInViewController.swift
 //  SimpleGallery
 //
 //  Created by Nicolas Vignolo on 12/08/2019.
@@ -10,21 +10,21 @@ import Foundation
 import UIKit
 import IHProgressHUD
 
-class LoginViewController: UIViewController {
+class SignInViewController: UIViewController {
     
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
-    @IBOutlet weak var loginButton: UIButton!
+    @IBOutlet weak var signInButton: UIButton!
     private var navigator:Navigator?
     
     var sessionViewModel = SessionViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "Login"
+        self.title = "Sign In"
         
         self.navigator = Navigator(sender: self)
-        self.loginButton.addTarget(self, action: #selector(login), for: .touchUpInside)
+        self.signInButton.addTarget(self, action: #selector(signIn), for: .touchUpInside)
         
         // Navigate to gallery if a user credentials are already stored
         if SessionViewModel().userExist {
@@ -34,31 +34,31 @@ class LoginViewController: UIViewController {
         self.bind()
     }
     
-    /// TODO: better input validation and UI reaction to it. Enable loginButton only if email and password was entered
+    /// TODO: better input validation and UI reaction to it. Enable signInButton only if email and password was entered
     func bind() {
         self.sessionViewModel.signingIn.bind { (signingIn) in
             signingIn ? IHProgressHUD.show() : IHProgressHUD.dismiss()
         }
     }
     
-    /// Loggin action.
-    @objc func login() {
+    /// Sing In action.
+    @objc func signIn() {
         if let email = self.emailTextField.text, let password = self.passwordTextField.text {
             self.sessionViewModel.signIn(with: email, password: password) { (success, error) in
                 if success {
-                    self.loginSucceed()
+                    self.signInSucceed()
                 } else {
-                    self.loginFail(error: error)
+                    self.signInFail(error: error)
                 }
             }
         }
     }
     
-    func loginSucceed() {
+    func signInSucceed() {
         self.navigator?.navigate(to: .gallery)
     }
     
-    func loginFail(error: SessionError?) {
+    func signInFail(error: SessionError?) {
         IHProgressHUD.showError(withStatus: error?.description)
     }
     

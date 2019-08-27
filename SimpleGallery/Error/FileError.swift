@@ -31,8 +31,6 @@ enum FileError: Error {
             return "Error deleting file"
         case .custom(let description):
             return description
-        default:
-            return self.localizedDescription
         }
     }
 }

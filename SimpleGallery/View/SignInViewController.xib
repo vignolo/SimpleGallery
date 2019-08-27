@@ -10,11 +10,11 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginViewController" customModule="SimpleGallery" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SignInViewController" customModule="SimpleGallery" customModuleProvider="target">
             <connections>
                 <outlet property="emailTextField" destination="DqG-S4-KLN" id="cXs-1M-cur"/>
-                <outlet property="loginButton" destination="tpW-M1-NxO" id="BBI-8D-Ta1"/>
                 <outlet property="passwordTextField" destination="SVT-X4-XLt" id="02w-Zd-5bc"/>
+                <outlet property="signInButton" destination="tpW-M1-NxO" id="Tbm-eC-ThY"/>
                 <outlet property="view" destination="iN0-l3-epB" id="ywa-gd-o6W"/>
             </connections>
         </placeholder>
@@ -26,13 +26,13 @@
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="v9X-K6-dry">
                     <rect key="frame" x="20" y="373" width="374" height="150"/>
                     <subviews>
-                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DqG-S4-KLN">
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DqG-S4-KLN">
                             <rect key="frame" x="0.0" y="0.0" width="374" height="48.5"/>
                             <nil key="textColor"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="emailAddress" textContentType="email"/>
                         </textField>
-                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SVT-X4-XLt">
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SVT-X4-XLt">
                             <rect key="frame" x="0.0" y="50.5" width="374" height="49"/>
                             <nil key="textColor"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -40,7 +40,7 @@
                         </textField>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tpW-M1-NxO">
                             <rect key="frame" x="0.0" y="101.5" width="374" height="48.5"/>
-                            <state key="normal" title="Login"/>
+                            <state key="normal" title="Sign In"/>
                         </button>
                     </subviews>
                     <constraints>

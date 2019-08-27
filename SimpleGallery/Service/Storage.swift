@@ -18,7 +18,7 @@ class Storage {
     enum Path: String {
         case images = "images"
     }
-    // Default storege file types
+    // Default starage file types
     enum FileType: String  {
         case image = "image/jpeg"
     }

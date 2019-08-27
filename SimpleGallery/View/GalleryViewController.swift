@@ -68,7 +68,7 @@ class GalleryViewController: UIViewController {
         }
     }
     
-    /// Sign Out action. Sign Out the current user and navigate to login screen
+    /// Sign Out action. Sign Out the current user and navigate to sign in screen
     @objc func signOut() {
         self.sessionViewModel.signOut()
         self.navigator?.navigateToRoot()
