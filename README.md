@@ -42,4 +42,5 @@ Gallery Files are stored on Cloud Storage.
 - [ ] Localization Manager
 - [ ] User Registration
 - [ ] Session permission for file access
+- [ ] Thumbnail creation with Firebase Functions
 
