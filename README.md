@@ -37,7 +37,7 @@ Gallery Files are stored on Cloud Storage.
 - [ ] UI Tests
 - [ ] Unit Tests
 - [ ] Pick image from device Camera
-- [ ] Image detail controller
+- [x] Image detail controller
 - [ ] Better UI
 - [ ] Localization Manager
 - [ ] User Registration
