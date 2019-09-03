@@ -46,6 +46,11 @@ class GalleryViewController: UIViewController {
         self.collectionView.register(ImageCollectionViewCell.self, forCellWithReuseIdentifier: ImageCollectionViewCell.identifier)
         self.collectionView.collectionViewLayout = GalleryFlowLayout()
         
+        // Add gesture to collection view. This way there is no need to add a protocol to the cell for now
+        let longPressGesture = UILongPressGestureRecognizer(target: self, action: #selector(handleGesture(gesture:)))
+        longPressGesture.delaysTouchesBegan = true
+        self.collectionView.addGestureRecognizer(longPressGesture)
+        
         self.imagePickerViewController.completion = { [unowned self] image in
             if let image = image {
                 self.uploadImage(image: image)
@@ -78,19 +83,16 @@ class GalleryViewController: UIViewController {
         self.navigator?.navigate(to: .custom(viewController: self.imagePickerViewController), mode: .present)
     }
     
-    /// Show Images action. TODO: Replace this with collection view edit mode
-    ///
-    /// - Parameter image: The to take action with
-    func showImageActions(image: ImageViewModel) {
-        let actionController = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
-        actionController.addAction(UIAlertAction(title: "View", style: .default, handler: { (action) in
-            self.navigator?.navigate(to: .imageDetail(image: image))
-        }))
-        actionController.addAction(UIAlertAction(title: "Delete", style: .destructive, handler: { (action) in
-            self.deleteImage(image: image)
-        }))
-        actionController.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
-        self.navigator?.navigate(to: .custom(viewController: actionController), mode: .present, animated: true)
+    /// Handle UIGestureRecognizer
+    @objc func handleGesture(gesture: UIGestureRecognizer) {
+        guard gesture.state == .began else {
+            return
+        }
+        
+        if let indexPath = self.collectionView.indexPathForItem(at: gesture.location(in: gesture.view)) {
+            let imageViewModel = self.imagesViewModel.image(at: indexPath.row)
+            self.showActions(for: imageViewModel)
+        }
     }
     
     /// Upload image action
@@ -101,7 +103,19 @@ class GalleryViewController: UIViewController {
             if error != nil {
                 IHProgressHUD.showError(withStatus: error?.description)
             }
-        }        
+        }
+    }
+    
+    /// Show Images action. TODO: Replace this with collection view edit mode
+    ///
+    /// - Parameter image: The to take action with
+    func showActions(for image: ImageViewModel) {
+        let actionController = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
+        actionController.addAction(UIAlertAction(title: "Delete", style: .destructive, handler: { (action) in
+            self.deleteImage(image: image)
+        }))
+        actionController.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+        self.navigator?.navigate(to: .custom(viewController: actionController), mode: .present, animated: true)
     }
     
     /// Delete image action
@@ -136,6 +150,6 @@ extension GalleryViewController: UICollectionViewDataSource {
 extension GalleryViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let imageViewModel = self.imagesViewModel.image(at: indexPath.row)
-        self.showImageActions(image: imageViewModel)
+        self.navigator?.navigate(to: .imageDetail(image: imageViewModel))
     }
 }
