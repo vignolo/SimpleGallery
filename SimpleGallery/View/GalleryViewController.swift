@@ -83,6 +83,9 @@ class GalleryViewController: UIViewController {
     /// - Parameter image: The to take action with
     func showImageActions(image: ImageViewModel) {
         let actionController = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
+        actionController.addAction(UIAlertAction(title: "View", style: .default, handler: { (action) in
+            self.navigator?.navigate(to: .imageDetail(image: image))
+        }))
         actionController.addAction(UIAlertAction(title: "Delete", style: .destructive, handler: { (action) in
             self.deleteImage(image: image)
         }))

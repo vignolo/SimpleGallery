@@ -23,7 +23,7 @@ class Navigator: NavigatorProtocol {
     enum Destination {
         case signIn
         case gallery
-        case imageDetail(image: Image)
+        case imageDetail(image: ImageViewModel)
         case imagePicker
         case custom(viewController: UIViewController)
     }

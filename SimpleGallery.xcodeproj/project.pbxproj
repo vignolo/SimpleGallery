@@ -72,6 +72,9 @@
 		FFB062EB2301FC6100FAD1DF /* GalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB062EA2301FC6100FAD1DF /* GalleryViewController.swift */; };
 		FFB062EC2301FC6100FAD1DF /* GalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB062EA2301FC6100FAD1DF /* GalleryViewController.swift */; };
 		FFB062ED2301FC6100FAD1DF /* GalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB062EA2301FC6100FAD1DF /* GalleryViewController.swift */; };
+		FFC53C44231D656B003A4D8F /* ImageScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC53C43231D656B003A4D8F /* ImageScrollView.swift */; };
+		FFC53C45231D656B003A4D8F /* ImageScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC53C43231D656B003A4D8F /* ImageScrollView.swift */; };
+		FFC53C46231D656B003A4D8F /* ImageScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC53C43231D656B003A4D8F /* ImageScrollView.swift */; };
 		FFDF5A222304E2FA0051DB53 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FFDF5A212304E2FA0051DB53 /* GoogleService-Info.plist */; };
 		FFDF5A262305A1F30051DB53 /* SessionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFDF5A252305A1F30051DB53 /* SessionViewModel.swift */; };
 		FFDF5A272305A1F30051DB53 /* SessionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFDF5A252305A1F30051DB53 /* SessionViewModel.swift */; };
@@ -153,6 +156,7 @@
 		FFB062D92301EE0600FAD1DF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FFB062E62301FBAC00FAD1DF /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		FFB062EA2301FC6100FAD1DF /* GalleryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryViewController.swift; sourceTree = "<group>"; };
+		FFC53C43231D656B003A4D8F /* ImageScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageScrollView.swift; sourceTree = "<group>"; };
 		FFDF5A212304E2FA0051DB53 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		FFDF5A252305A1F30051DB53 /* SessionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionViewModel.swift; sourceTree = "<group>"; };
 		FFDF5A292305F9890051DB53 /* Database.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Database.swift; sourceTree = "<group>"; };
@@ -333,6 +337,7 @@
 				FF74CEAC230235D900A4AD30 /* ImagePickerViewController.swift */,
 				FFFC42A8230B6A1100C3139E /* ImageCollectionViewCell.swift */,
 				FFAD6D61230C4D8200524DAC /* GalleryFlowLayout.swift */,
+				FFC53C43231D656B003A4D8F /* ImageScrollView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -606,6 +611,7 @@
 				FFDF5A262305A1F30051DB53 /* SessionViewModel.swift in Sources */,
 				FF74CEA02302147700A4AD30 /* Navigator.swift in Sources */,
 				FF957E582306052B00BE2186 /* StorageWorker.swift in Sources */,
+				FFC53C44231D656B003A4D8F /* ImageScrollView.swift in Sources */,
 				FFB062EB2301FC6100FAD1DF /* GalleryViewController.swift in Sources */,
 				FF9591802303355000381EC1 /* User.swift in Sources */,
 				FF74CEA92302169500A4AD30 /* ImageDetailViewController.swift in Sources */,
@@ -638,6 +644,7 @@
 				FFDF5A272305A1F30051DB53 /* SessionViewModel.swift in Sources */,
 				FFB062EC2301FC6100FAD1DF /* GalleryViewController.swift in Sources */,
 				FF957E592306052B00BE2186 /* StorageWorker.swift in Sources */,
+				FFC53C45231D656B003A4D8F /* ImageScrollView.swift in Sources */,
 				FF74CE9D2302140900A4AD30 /* NavigatorProtocol.swift in Sources */,
 				FF9591812303355000381EC1 /* User.swift in Sources */,
 				FFB062E82301FBAC00FAD1DF /* SignInViewController.swift in Sources */,
@@ -670,6 +677,7 @@
 				FFDF5A282305A1F30051DB53 /* SessionViewModel.swift in Sources */,
 				FFB062ED2301FC6100FAD1DF /* GalleryViewController.swift in Sources */,
 				FF957E5A2306052B00BE2186 /* StorageWorker.swift in Sources */,
+				FFC53C46231D656B003A4D8F /* ImageScrollView.swift in Sources */,
 				FF74CE9E2302140900A4AD30 /* NavigatorProtocol.swift in Sources */,
 				FF9591822303355000381EC1 /* User.swift in Sources */,
 				FFB062E92301FBAC00FAD1DF /* SignInViewController.swift in Sources */,
