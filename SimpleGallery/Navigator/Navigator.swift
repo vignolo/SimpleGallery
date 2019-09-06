@@ -22,6 +22,7 @@ class Navigator: NavigatorProtocol {
     /// - custom: use this option to push a custom view controller
     enum Destination {
         case signIn
+        case signUp
         case gallery
         case imageDetail(image: ImageViewModel)
         case imagePicker
@@ -75,6 +76,8 @@ class Navigator: NavigatorProtocol {
         switch destination {
             case .signIn:
                 return SignInViewController()
+            case .signUp:
+                return SignUpViewController()
             case .gallery:
                 return GalleryViewController()
             case .imageDetail(let image):

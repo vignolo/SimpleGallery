@@ -14,7 +14,8 @@ class SignInViewController: UIViewController {
     
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
-    @IBOutlet weak var signInButton: UIButton!
+    @IBOutlet weak var signInButton: SolidButton!
+    @IBOutlet weak var signUpButton: TextButton!
     private var navigator:Navigator?
     
     var sessionViewModel = SessionViewModel()
@@ -25,6 +26,7 @@ class SignInViewController: UIViewController {
         
         self.navigator = Navigator(sender: self)
         self.signInButton.addTarget(self, action: #selector(signIn), for: .touchUpInside)
+        self.signUpButton.addTarget(self, action: #selector(navigateToSignUp), for: .touchUpInside)
         
         // Navigate to gallery if a user credentials are already stored
         if SessionViewModel().userExist {
@@ -52,6 +54,10 @@ class SignInViewController: UIViewController {
                 }
             }
         }
+    }
+    
+    @objc func navigateToSignUp() {
+        self.navigator?.navigate(to: .signUp)
     }
     
     func signInSucceed() {

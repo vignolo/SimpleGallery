@@ -4,7 +4,6 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -15,6 +14,7 @@
                 <outlet property="emailTextField" destination="DqG-S4-KLN" id="cXs-1M-cur"/>
                 <outlet property="passwordTextField" destination="SVT-X4-XLt" id="02w-Zd-5bc"/>
                 <outlet property="signInButton" destination="tpW-M1-NxO" id="Tbm-eC-ThY"/>
+                <outlet property="signUpButton" destination="o6Q-EB-LLG" id="o3m-q9-JG4"/>
                 <outlet property="view" destination="iN0-l3-epB" id="ywa-gd-o6W"/>
             </connections>
         </placeholder>
@@ -23,36 +23,41 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="v9X-K6-dry">
-                    <rect key="frame" x="20" y="373" width="374" height="150"/>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="v9X-K6-dry">
+                    <rect key="frame" x="20" y="144" width="374" height="185"/>
                     <subviews>
                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DqG-S4-KLN">
-                            <rect key="frame" x="0.0" y="0.0" width="374" height="48.5"/>
+                            <rect key="frame" x="0.0" y="0.0" width="374" height="42"/>
                             <nil key="textColor"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="emailAddress" textContentType="email"/>
                         </textField>
                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SVT-X4-XLt">
-                            <rect key="frame" x="0.0" y="50.5" width="374" height="49"/>
+                            <rect key="frame" x="0.0" y="48" width="374" height="41.5"/>
                             <nil key="textColor"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits" keyboardAppearance="alert" secureTextEntry="YES" textContentType="password"/>
                         </textField>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tpW-M1-NxO">
-                            <rect key="frame" x="0.0" y="101.5" width="374" height="48.5"/>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tpW-M1-NxO" customClass="SolidButton" customModule="SimpleGallery" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="95.5" width="374" height="42"/>
+                            <color key="backgroundColor" red="0.8766818676" green="0.33333334329999997" blue="0.33333334329999997" alpha="1" colorSpace="calibratedRGB"/>
                             <state key="normal" title="Sign In"/>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o6Q-EB-LLG" customClass="TextButton" customModule="SimpleGallery" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="143.5" width="374" height="41.5"/>
+                            <state key="normal" title="Don't have account? Sign up here"/>
                         </button>
                     </subviews>
                     <constraints>
-                        <constraint firstAttribute="height" constant="150" id="p8N-y6-jJr"/>
+                        <constraint firstAttribute="height" constant="185" id="D2j-p9-4Ok"/>
                     </constraints>
                 </stackView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="v9X-K6-dry" secondAttribute="trailing" constant="20" id="FKK-Mc-ykD"/>
-                <constraint firstItem="v9X-K6-dry" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="Nsv-VM-sFw"/>
                 <constraint firstItem="v9X-K6-dry" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="aca-G1-rH2"/>
+                <constraint firstItem="v9X-K6-dry" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="100" id="i01-Fd-cop"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <point key="canvasLocation" x="137.68115942028987" y="147.99107142857142"/>

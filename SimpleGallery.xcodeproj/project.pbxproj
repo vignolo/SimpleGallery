@@ -91,6 +91,24 @@
 		FFEE85B323048883000CA5A0 /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFEE85B223048883000CA5A0 /* Storage.swift */; };
 		FFEE85B423048883000CA5A0 /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFEE85B223048883000CA5A0 /* Storage.swift */; };
 		FFEE85B523048883000CA5A0 /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFEE85B223048883000CA5A0 /* Storage.swift */; };
+		FFF8EBA82320353F00DC4C5E /* SolidButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF8EBA72320353F00DC4C5E /* SolidButton.swift */; };
+		FFF8EBA92320353F00DC4C5E /* SolidButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF8EBA72320353F00DC4C5E /* SolidButton.swift */; };
+		FFF8EBAA2320353F00DC4C5E /* SolidButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF8EBA72320353F00DC4C5E /* SolidButton.swift */; };
+		FFF8EBAC23203D2900DC4C5E /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF8EBAB23203D2900DC4C5E /* UIColor.swift */; };
+		FFF8EBAD23203D2900DC4C5E /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF8EBAB23203D2900DC4C5E /* UIColor.swift */; };
+		FFF8EBAE23203D2900DC4C5E /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF8EBAB23203D2900DC4C5E /* UIColor.swift */; };
+		FFF8EBB12320444200DC4C5E /* Template.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF8EBB02320444200DC4C5E /* Template.swift */; };
+		FFF8EBB22320444200DC4C5E /* Template.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF8EBB02320444200DC4C5E /* Template.swift */; };
+		FFF8EBB32320444200DC4C5E /* Template.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF8EBB02320444200DC4C5E /* Template.swift */; };
+		FFF8EBB52320456000DC4C5E /* TextButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF8EBB42320456000DC4C5E /* TextButton.swift */; };
+		FFF8EBB62320456000DC4C5E /* TextButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF8EBB42320456000DC4C5E /* TextButton.swift */; };
+		FFF8EBB72320456000DC4C5E /* TextButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF8EBB42320456000DC4C5E /* TextButton.swift */; };
+		FFF8EBB92321D85100DC4C5E /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF8EBB82321D85100DC4C5E /* SignUpViewController.swift */; };
+		FFF8EBBA2321D85100DC4C5E /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF8EBB82321D85100DC4C5E /* SignUpViewController.swift */; };
+		FFF8EBBB2321D85100DC4C5E /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF8EBB82321D85100DC4C5E /* SignUpViewController.swift */; };
+		FFF8EBBD2321D9E000DC4C5E /* SignUpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FFF8EBBC2321D9DF00DC4C5E /* SignUpViewController.xib */; };
+		FFF8EBBE2321D9E000DC4C5E /* SignUpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FFF8EBBC2321D9DF00DC4C5E /* SignUpViewController.xib */; };
+		FFF8EBBF2321D9E000DC4C5E /* SignUpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FFF8EBBC2321D9DF00DC4C5E /* SignUpViewController.xib */; };
 		FFFC42A5230B0E4B00C3139E /* DatabaseWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFFC42A4230B0E4B00C3139E /* DatabaseWorker.swift */; };
 		FFFC42A6230B0E4C00C3139E /* DatabaseWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFFC42A4230B0E4B00C3139E /* DatabaseWorker.swift */; };
 		FFFC42A7230B0E4C00C3139E /* DatabaseWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFFC42A4230B0E4B00C3139E /* DatabaseWorker.swift */; };
@@ -163,6 +181,12 @@
 		FFEE85A523044B65000CA5A0 /* GalleryViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GalleryViewController.xib; sourceTree = "<group>"; };
 		FFEE85AE230453F3000CA5A0 /* ImageWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageWorker.swift; sourceTree = "<group>"; };
 		FFEE85B223048883000CA5A0 /* Storage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storage.swift; sourceTree = "<group>"; };
+		FFF8EBA72320353F00DC4C5E /* SolidButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SolidButton.swift; sourceTree = "<group>"; };
+		FFF8EBAB23203D2900DC4C5E /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
+		FFF8EBB02320444200DC4C5E /* Template.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Template.swift; sourceTree = "<group>"; };
+		FFF8EBB42320456000DC4C5E /* TextButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextButton.swift; sourceTree = "<group>"; };
+		FFF8EBB82321D85100DC4C5E /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		FFF8EBBC2321D9DF00DC4C5E /* SignUpViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SignUpViewController.xib; sourceTree = "<group>"; };
 		FFFC42A4230B0E4B00C3139E /* DatabaseWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseWorker.swift; sourceTree = "<group>"; };
 		FFFC42A8230B6A1100C3139E /* ImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -241,6 +265,7 @@
 			isa = PBXGroup;
 			children = (
 				FF957E5B2306112D00BE2186 /* UIImage.swift */,
+				FFF8EBAB23203D2900DC4C5E /* UIColor.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -291,6 +316,7 @@
 		FFB062B62301EE0500FAD1DF /* SimpleGallery */ = {
 			isa = PBXGroup;
 			children = (
+				FFF8EBAF2320442900DC4C5E /* Configuration */,
 				FFDF5A202304E0500051DB53 /* Credentials */,
 				FFEE85A9230452F7000CA5A0 /* Service */,
 				FF3E1B7823157F4C00049AB6 /* Error */,
@@ -338,6 +364,10 @@
 				FFFC42A8230B6A1100C3139E /* ImageCollectionViewCell.swift */,
 				FFAD6D61230C4D8200524DAC /* GalleryFlowLayout.swift */,
 				FFC53C43231D656B003A4D8F /* ImageScrollView.swift */,
+				FFF8EBA72320353F00DC4C5E /* SolidButton.swift */,
+				FFF8EBB42320456000DC4C5E /* TextButton.swift */,
+				FFF8EBB82321D85100DC4C5E /* SignUpViewController.swift */,
+				FFF8EBBC2321D9DF00DC4C5E /* SignUpViewController.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -367,6 +397,14 @@
 				FFDF5A292305F9890051DB53 /* Database.swift */,
 			);
 			path = Service;
+			sourceTree = "<group>";
+		};
+		FFF8EBAF2320442900DC4C5E /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				FFF8EBB02320444200DC4C5E /* Template.swift */,
+			);
+			path = Configuration;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -481,6 +519,7 @@
 				FFEE85A623044B65000CA5A0 /* GalleryViewController.xib in Resources */,
 				FFDF5A222304E2FA0051DB53 /* GoogleService-Info.plist in Resources */,
 				FFB062BF2301EE0600FAD1DF /* Assets.xcassets in Resources */,
+				FFF8EBBD2321D9E000DC4C5E /* SignUpViewController.xib in Resources */,
 				FF4D5F4E2303713900FF1D57 /* SignInViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -490,6 +529,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FF4D5F4F2303713900FF1D57 /* SignInViewController.xib in Resources */,
+				FFF8EBBE2321D9E000DC4C5E /* SignUpViewController.xib in Resources */,
 				FFEE85A723044B65000CA5A0 /* GalleryViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -499,6 +539,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FF4D5F502303713900FF1D57 /* SignInViewController.xib in Resources */,
+				FFF8EBBF2321D9E000DC4C5E /* SignUpViewController.xib in Resources */,
 				FFEE85A823044B65000CA5A0 /* GalleryViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -597,10 +638,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				FF74CEA52302157500A4AD30 /* Image.swift in Sources */,
+				FFF8EBAC23203D2900DC4C5E /* UIColor.swift in Sources */,
 				FFFC42A9230B6A1100C3139E /* ImageCollectionViewCell.swift in Sources */,
 				FF957E5C2306112D00BE2186 /* UIImage.swift in Sources */,
 				FFB062E72301FBAC00FAD1DF /* SignInViewController.swift in Sources */,
 				FFDF5A2A2305F9890051DB53 /* Database.swift in Sources */,
+				FFF8EBB52320456000DC4C5E /* TextButton.swift in Sources */,
+				FFF8EBB12320444200DC4C5E /* Template.swift in Sources */,
 				FF74CEAD230235D900A4AD30 /* ImagePickerViewController.swift in Sources */,
 				FF74CEB22302375700A4AD30 /* ImageViewModel.swift in Sources */,
 				FF499E31230EE8AA00EAC3A2 /* SessionError.swift in Sources */,
@@ -609,6 +653,7 @@
 				FF4D5F462303379700FF1D57 /* UserViewModel.swift in Sources */,
 				FF74CE9C2302140900A4AD30 /* NavigatorProtocol.swift in Sources */,
 				FFDF5A262305A1F30051DB53 /* SessionViewModel.swift in Sources */,
+				FFF8EBB92321D85100DC4C5E /* SignUpViewController.swift in Sources */,
 				FF74CEA02302147700A4AD30 /* Navigator.swift in Sources */,
 				FF957E582306052B00BE2186 /* StorageWorker.swift in Sources */,
 				FFC53C44231D656B003A4D8F /* ImageScrollView.swift in Sources */,
@@ -619,6 +664,7 @@
 				FFAD6D62230C4D8200524DAC /* GalleryFlowLayout.swift in Sources */,
 				FFEE85B323048883000CA5A0 /* Storage.swift in Sources */,
 				FF499E2D230E03AA00EAC3A2 /* FileError.swift in Sources */,
+				FFF8EBA82320353F00DC4C5E /* SolidButton.swift in Sources */,
 				FF9591782302FD5800381EC1 /* ImagesViewModel.swift in Sources */,
 				FFFC42A5230B0E4B00C3139E /* DatabaseWorker.swift in Sources */,
 				FFB062B82301EE0500FAD1DF /* AppDelegate.swift in Sources */,
@@ -630,10 +676,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				FF74CEA12302147700A4AD30 /* Navigator.swift in Sources */,
+				FFF8EBAD23203D2900DC4C5E /* UIColor.swift in Sources */,
 				FFFC42AA230B6A1100C3139E /* ImageCollectionViewCell.swift in Sources */,
 				FF957E5D2306112D00BE2186 /* UIImage.swift in Sources */,
 				FF74CEA62302157500A4AD30 /* Image.swift in Sources */,
 				FFDF5A2B2305F9890051DB53 /* Database.swift in Sources */,
+				FFF8EBB62320456000DC4C5E /* TextButton.swift in Sources */,
+				FFF8EBB22320444200DC4C5E /* Template.swift in Sources */,
 				FF74CEAE230235D900A4AD30 /* ImagePickerViewController.swift in Sources */,
 				FF74CEB32302375700A4AD30 /* ImageViewModel.swift in Sources */,
 				FF499E32230EE8AA00EAC3A2 /* SessionError.swift in Sources */,
@@ -642,6 +691,7 @@
 				FF4D5F472303379700FF1D57 /* UserViewModel.swift in Sources */,
 				FF74CEAA2302169500A4AD30 /* ImageDetailViewController.swift in Sources */,
 				FFDF5A272305A1F30051DB53 /* SessionViewModel.swift in Sources */,
+				FFF8EBBA2321D85100DC4C5E /* SignUpViewController.swift in Sources */,
 				FFB062EC2301FC6100FAD1DF /* GalleryViewController.swift in Sources */,
 				FF957E592306052B00BE2186 /* StorageWorker.swift in Sources */,
 				FFC53C45231D656B003A4D8F /* ImageScrollView.swift in Sources */,
@@ -652,6 +702,7 @@
 				FFAD6D63230C4D8200524DAC /* GalleryFlowLayout.swift in Sources */,
 				FFEE85B423048883000CA5A0 /* Storage.swift in Sources */,
 				FF499E2E230E03AA00EAC3A2 /* FileError.swift in Sources */,
+				FFF8EBA92320353F00DC4C5E /* SolidButton.swift in Sources */,
 				FF9591792302FD5800381EC1 /* ImagesViewModel.swift in Sources */,
 				FFFC42A6230B0E4C00C3139E /* DatabaseWorker.swift in Sources */,
 				FFB062CD2301EE0600FAD1DF /* SimpleGalleryTests.swift in Sources */,
@@ -663,10 +714,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				FF74CEA22302147700A4AD30 /* Navigator.swift in Sources */,
+				FFF8EBAE23203D2900DC4C5E /* UIColor.swift in Sources */,
 				FFFC42AB230B6A1100C3139E /* ImageCollectionViewCell.swift in Sources */,
 				FF957E5E2306112D00BE2186 /* UIImage.swift in Sources */,
 				FF74CEA72302157500A4AD30 /* Image.swift in Sources */,
 				FFDF5A2C2305F9890051DB53 /* Database.swift in Sources */,
+				FFF8EBB72320456000DC4C5E /* TextButton.swift in Sources */,
+				FFF8EBB32320444200DC4C5E /* Template.swift in Sources */,
 				FF74CEAF230235D900A4AD30 /* ImagePickerViewController.swift in Sources */,
 				FF74CEB42302375700A4AD30 /* ImageViewModel.swift in Sources */,
 				FF499E33230EE8AA00EAC3A2 /* SessionError.swift in Sources */,
@@ -675,6 +729,7 @@
 				FF4D5F482303379700FF1D57 /* UserViewModel.swift in Sources */,
 				FF74CEAB2302169500A4AD30 /* ImageDetailViewController.swift in Sources */,
 				FFDF5A282305A1F30051DB53 /* SessionViewModel.swift in Sources */,
+				FFF8EBBB2321D85100DC4C5E /* SignUpViewController.swift in Sources */,
 				FFB062ED2301FC6100FAD1DF /* GalleryViewController.swift in Sources */,
 				FF957E5A2306052B00BE2186 /* StorageWorker.swift in Sources */,
 				FFC53C46231D656B003A4D8F /* ImageScrollView.swift in Sources */,
@@ -685,6 +740,7 @@
 				FFAD6D64230C4D8200524DAC /* GalleryFlowLayout.swift in Sources */,
 				FFEE85B523048883000CA5A0 /* Storage.swift in Sources */,
 				FF499E2F230E03AA00EAC3A2 /* FileError.swift in Sources */,
+				FFF8EBAA2320353F00DC4C5E /* SolidButton.swift in Sources */,
 				FF95917A2302FD5800381EC1 /* ImagesViewModel.swift in Sources */,
 				FFFC42A7230B0E4C00C3139E /* DatabaseWorker.swift in Sources */,
 				FFB062D82301EE0600FAD1DF /* SimpleGalleryUITests.swift in Sources */,
