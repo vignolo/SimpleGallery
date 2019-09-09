@@ -38,9 +38,9 @@ Gallery Files are stored on Cloud Storage.
 - [ ] Unit Tests
 - [ ] Pick image from device Camera
 - [x] Image detail controller
-- [ ] Better UI
+- [x] Better UI
 - [ ] Localization Manager
-- [ ] User Registration
+- [x] User Registration
 - [ ] Session permission for file access
 - [ ] Thumbnail creation with Firebase Functions
 
