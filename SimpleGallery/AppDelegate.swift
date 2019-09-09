@@ -21,7 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Use SignInViewController as app entry point and navigate from there. This will help for a better stored credentials validation
         // and avoid instance helpers and workers for unautorized users.
         let viewController = SignInViewController()
-        let navigationController = UINavigationController(rootViewController: viewController)
+        let navigationController = NavigationController(rootViewController: viewController)
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.rootViewController = navigationController
         window?.makeKeyAndVisible()

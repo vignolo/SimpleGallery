@@ -43,6 +43,9 @@
 		FF74CEB22302375700A4AD30 /* ImageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF74CEB12302375700A4AD30 /* ImageViewModel.swift */; };
 		FF74CEB32302375700A4AD30 /* ImageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF74CEB12302375700A4AD30 /* ImageViewModel.swift */; };
 		FF74CEB42302375700A4AD30 /* ImageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF74CEB12302375700A4AD30 /* ImageViewModel.swift */; };
+		FF924D152326DBF400288DC8 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF924D142326DBF400288DC8 /* NavigationController.swift */; };
+		FF924D162326DBF400288DC8 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF924D142326DBF400288DC8 /* NavigationController.swift */; };
+		FF924D172326DBF400288DC8 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF924D142326DBF400288DC8 /* NavigationController.swift */; };
 		FF957E582306052B00BE2186 /* StorageWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF957E572306052B00BE2186 /* StorageWorker.swift */; };
 		FF957E592306052B00BE2186 /* StorageWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF957E572306052B00BE2186 /* StorageWorker.swift */; };
 		FF957E5A2306052B00BE2186 /* StorageWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF957E572306052B00BE2186 /* StorageWorker.swift */; };
@@ -155,6 +158,7 @@
 		FF74CEA82302169500A4AD30 /* ImageDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDetailViewController.swift; sourceTree = "<group>"; };
 		FF74CEAC230235D900A4AD30 /* ImagePickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerViewController.swift; sourceTree = "<group>"; };
 		FF74CEB12302375700A4AD30 /* ImageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewModel.swift; sourceTree = "<group>"; };
+		FF924D142326DBF400288DC8 /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
 		FF957E572306052B00BE2186 /* StorageWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageWorker.swift; sourceTree = "<group>"; };
 		FF957E5B2306112D00BE2186 /* UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
 		FF9591772302FD5800381EC1 /* ImagesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesViewModel.swift; sourceTree = "<group>"; };
@@ -368,6 +372,7 @@
 				FFF8EBB42320456000DC4C5E /* TextButton.swift */,
 				FFF8EBB82321D85100DC4C5E /* SignUpViewController.swift */,
 				FFF8EBBC2321D9DF00DC4C5E /* SignUpViewController.xib */,
+				FF924D142326DBF400288DC8 /* NavigationController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -642,6 +647,7 @@
 				FFFC42A9230B6A1100C3139E /* ImageCollectionViewCell.swift in Sources */,
 				FF957E5C2306112D00BE2186 /* UIImage.swift in Sources */,
 				FFB062E72301FBAC00FAD1DF /* SignInViewController.swift in Sources */,
+				FF924D152326DBF400288DC8 /* NavigationController.swift in Sources */,
 				FFDF5A2A2305F9890051DB53 /* Database.swift in Sources */,
 				FFF8EBB52320456000DC4C5E /* TextButton.swift in Sources */,
 				FFF8EBB12320444200DC4C5E /* Template.swift in Sources */,
@@ -680,6 +686,7 @@
 				FFFC42AA230B6A1100C3139E /* ImageCollectionViewCell.swift in Sources */,
 				FF957E5D2306112D00BE2186 /* UIImage.swift in Sources */,
 				FF74CEA62302157500A4AD30 /* Image.swift in Sources */,
+				FF924D162326DBF400288DC8 /* NavigationController.swift in Sources */,
 				FFDF5A2B2305F9890051DB53 /* Database.swift in Sources */,
 				FFF8EBB62320456000DC4C5E /* TextButton.swift in Sources */,
 				FFF8EBB22320444200DC4C5E /* Template.swift in Sources */,
@@ -718,6 +725,7 @@
 				FFFC42AB230B6A1100C3139E /* ImageCollectionViewCell.swift in Sources */,
 				FF957E5E2306112D00BE2186 /* UIImage.swift in Sources */,
 				FF74CEA72302157500A4AD30 /* Image.swift in Sources */,
+				FF924D172326DBF400288DC8 /* NavigationController.swift in Sources */,
 				FFDF5A2C2305F9890051DB53 /* Database.swift in Sources */,
 				FFF8EBB72320456000DC4C5E /* TextButton.swift in Sources */,
 				FFF8EBB32320444200DC4C5E /* Template.swift in Sources */,
