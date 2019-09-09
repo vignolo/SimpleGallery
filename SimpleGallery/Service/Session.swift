@@ -52,6 +52,23 @@ class Session {
             completion(true, nil)
         }
     }
+    
+    /// Create a new account and sign in
+    ///
+    /// - Parameters:
+    ///   - email: new user email
+    ///   - password: new user password
+    ///   - completion: block invoqued at the end of the proccess. Returnig success:Bool and error:SessionError
+    func signUp(with email:String, password: String, completion: @escaping ((_ sucess: Bool, _ error: SessionError?) -> Void)) {
+        Auth.auth().createUser(withEmail: email, password: password) { (result, error) in
+            guard error == nil else {
+                // Return SessionError.custom for debug porpuses. This should be changed to .wrongCredentials
+                completion(false, SessionError.custom(description: error!.localizedDescription))
+                return
+            }
+            completion(true, nil)
+        }
+    }
 }
 
 extension Session {

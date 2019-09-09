@@ -21,6 +21,8 @@ class SessionViewModel {
     }
     /// Signing in property. true if a sing in operation is currently active
     var signingIn: Bindable<Bool> = Bindable(false)
+    /// Signing up property. true if a sing up operation is currently active
+    var signingUp: Bindable<Bool> = Bindable(false)
     
     /// Check is the current stored user credentials are valid
     ///
@@ -39,6 +41,20 @@ class SessionViewModel {
         self.signingIn.value = true
         self.session.signIn(with: email, password: password) { (success, error) in
             self.signingIn.value = false
+            completion(success, error)
+        }
+    }
+    
+    /// Sign up a new user and sign in if succeed
+    ///
+    /// - Parameters:
+    ///   - email: new user email
+    ///   - password: new user password
+    ///   - completion: block invoqued at the end of the proccess. Return success:Bool true if credentials are valid or false if not with error:SessionError
+    func signUp(with email: String, password: String, completion: @escaping ((_ sucess: Bool, _ error: SessionError?) -> Void)) {
+        self.signingUp.value = true
+        self.session.signUp(with: email, password: password) { (success, error) in
+            self.signingUp.value = false
             completion(success, error)
         }
     }
