@@ -14,7 +14,7 @@ Cocoa-pods is used for dependency management. Pods directory is checked on the r
 
 
 ### Pattern and Bindable properties
-MVVM pattern allow a better testability and layer abstraction for reusability. The Bindable class enable to bind UI updates depending on the data model changes or process status.
+MVVM pattern allow a better testability and layer abstraction for reusability. The `Bindable` class enable to bind UI updates depending on the data model changes or process status.
 
 
 ### No Storyboard file
