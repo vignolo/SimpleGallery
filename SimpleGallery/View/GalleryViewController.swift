@@ -146,7 +146,6 @@ extension GalleryViewController: UICollectionViewDataSource {
 }
 
 // MARK: - UICollectionViewDelegate.
-// TODO: didSelectItemAt should navigate to Navigator.imageDetail
 extension GalleryViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let imageViewModel = self.imagesViewModel.image(at: indexPath.row)
