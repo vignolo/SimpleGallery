@@ -21,6 +21,7 @@ class ImagePickerViewController: UIImagePickerController, UIImagePickerControlle
         self.delegate = self
         self.allowsEditing = false
         self.sourceType = .photoLibrary
+        self.navigationBar.tintColor = UIColor(templateColor: .pink)
     }
     
     @objc func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
