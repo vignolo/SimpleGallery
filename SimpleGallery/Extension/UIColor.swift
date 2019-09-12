@@ -48,7 +48,7 @@ extension UIColor {
         self.init(red: r, green: g, blue: b, alpha: a)
     }
     
-    convenience init?(templateColor: Template.Colors) {
+    convenience init?(templateColor: Template.Color) {
         self.init(hex:templateColor.rawValue)
     }
     

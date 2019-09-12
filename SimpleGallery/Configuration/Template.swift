@@ -9,7 +9,7 @@
 import Foundation
 
 struct Template {
-    enum Colors: String {
+    enum Color: String {
         case pink = "fc5185"
     }
 }
