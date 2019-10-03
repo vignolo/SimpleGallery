@@ -32,6 +32,12 @@ Gallery Files index is stored on Cloud Firestore.
 ### File Storage
 Gallery Files are stored on Cloud Storage.
 
+### Build the project
+1. Clone this repository
+2. Go to Firebase Console and Create a project. Enable *Storage*, *Cloud Firestore* and *Email Authentication*
+3. Configure the Firebase Project settings with your Bundle identifier and download the `GoogleService-Info.plist` file
+4. Open `SimpleGallery.xcworkspace` and add your `GoogleService-Info.plist` file to the XCode project
+5. Build
 
 ### TODO
 - [ ] UI Tests
