@@ -4,7 +4,7 @@ A really simple Image gallery app
 ### External Library Dependency
 Cocoa-pods is used for dependency management. Pods directory is checked on the repository. This way, project can be run immediately after cloning and avoid possible compatibility conflicts for a resource installed with different version.
 
-#### Installes Pods
+#### Installed Pods
 - Firebase/Storage: For file storage
 - Firebase/Auth: For user authentication
 - Firebase/Core: Required by Firestore
